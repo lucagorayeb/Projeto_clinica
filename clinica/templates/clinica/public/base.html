@@ -30,7 +30,12 @@
                 <div class="navbar-nav mr-auto">
                 <a class="nav-item nav-link" href="{% url 'clinica-home' %}">Home</a>
                 <a class="nav-item nav-link" href="{% url 'clinica-professional' %}">Profissional</a>
-                <a class="nav-item nav-link" href="{% url 'clinica-desease' %}">Tratamentos</a>
+                <ul>
+                    <li><a class="nav-item nav-link" href="{% url 'clinica-desease' %}">Tratamentos</a></li>
+                    <li><a class="nav-item nav-link" href="{% url 'clinica-desease-cirurgia-traumatologia'%}">cirurgia e traumatologia</a></li>
+                    <li><a class="nav-item nav-link" href="{% url 'clinica-desease-' %}">Tratamentos</a></li>
+                    <li><a class="nav-item nav-link" href="{% url 'clinica-desease-' %}">Tratamentos</a></li>
+                </ul>
                 <a class="nav-item nav-link" href="{% url 'clinica-about' %}">Sobre</a>
                 </div>
             </div>
