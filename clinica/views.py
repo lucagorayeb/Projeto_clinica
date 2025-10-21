@@ -21,4 +21,7 @@ def desease_periconarite(request):
 def desease_dentes_inclusos(request):
     return render(request, 'clinica/public/desease/dentes_inclusos.html')
 
+def tracionamento_dentario(request):
+    return render(request, 'clinica/public/desease/tracionamento_dentario.html')
+
 
