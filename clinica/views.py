@@ -24,4 +24,19 @@ def desease_dentes_inclusos(request):
 def tracionamento_dentario(request):
     return render(request, 'clinica/public/desease/tracionamento_dentario.html')
 
+def cisto_odontogenico(request):
+    return render(request, 'clinica/public/desease/cisto_odontogenico.html')
+
+def freio(request):
+    return render(request, 'clinica/public/desease/freio.html')
+
+def enxertos(request):
+    return render(request, 'clinica/public/desease/enxertos.html')
+
+def seio_maxilar(request):
+    return render(request, 'clinica/public/desease/seio_maxilar.html')
+
+def implantes(request):
+    return render(request, 'clinica/public/desease/implantes.html')
+
 
