@@ -30,12 +30,18 @@
                 <div class="navbar-nav mr-auto">
                 <a class="nav-item nav-link" href="{% url 'clinica-home' %}">Home</a>
                 <a class="nav-item nav-link" href="{% url 'clinica-professional' %}">Profissional</a>
-                <ul>
-                    <li><a class="nav-item nav-link" href="{% url 'clinica-desease' %}">Tratamentos</a></li>
-                    <li><a class="nav-item nav-link" href="{% url 'clinica-desease-cirurgia-traumatologia'%}">cirurgia e traumatologia</a></li>
-                    <li><a class="nav-item nav-link" href="{% url 'clinica-desease-' %}">Tratamentos</a></li>
-                    <li><a class="nav-item nav-link" href="{% url 'clinica-desease-' %}">Tratamentos</a></li>
-                </ul>
+                <div  class="submenu-tratamentos nav-item nav-link">
+                    <ul>
+                        <li> <a href="{% url 'clinica-desease' %}">Tratamentos</a>
+                                <ul >
+                                    <li> <a  href="{% url 'clinica-desease-cirurgia-traumatologia'%}">Traumatologia</a> </li>
+                                    <li> <a  href="{% url 'clinica-desease-periconarite'%}">Pericoronarite</a> </li>
+                                    <li> <a  href="{% url 'clinica-dentes-inclusos' %}">Dente Incluso</a> </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </div>
+                
                 <a class="nav-item nav-link" href="{% url 'clinica-about' %}">Sobre</a>
                 </div>
             </div>
