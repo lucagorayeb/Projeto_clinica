@@ -27,4 +27,12 @@ urlpatterns = [
     path('desease/seio_maxilar', views.seio_maxilar, name='clinica-seio-maxilar'),
 
     path('desease/implantes', views.implantes, name='clinica-implantes'),
+
+    path('desease/atm', views.atm, name='clinica-atm'),
+
+    path('desease/traumas_face', views.traumas_face, name='clinica-traumas-face'),
+
+    path('desease/ortognatica', views.ortognatica, name='clinica-ortognatica'),
+
+    path('desease/expansao_maxila', views.expansao_maxila, name='clinica-expansao-maxila'),
 ]

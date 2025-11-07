@@ -39,4 +39,16 @@ def seio_maxilar(request):
 def implantes(request):
     return render(request, 'clinica/public/desease/implantes.html')
 
+def atm(request):
+    return render(request, 'clinica/public/desease/atm.html')
+
+def traumas_face(request):
+    return render(request, 'clinica/public/desease/traumas_face.html')
+
+def ortognatica(request):
+    return render(request, 'clinica/public/desease/ortognatica.html')
+
+def expansao_maxila(request):
+    return render(request, 'clinica/public/desease/expansao_maxila.html')
+
 
