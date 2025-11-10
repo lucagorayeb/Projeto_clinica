@@ -35,4 +35,16 @@ urlpatterns = [
     path('desease/ortognatica', views.ortognatica, name='clinica-ortognatica'),
 
     path('desease/expansao_maxila', views.expansao_maxila, name='clinica-expansao-maxila'),
+
+    path('get/', views.get_pacientes, name='get-pacientes'),
+
+    path('get/<str:name>', views.get_paciente_by_nome, name='get-paciente-name'),
+
+    path('data/', views.paciente_manager)
+
+    #path ('get/<str:cpf>', views.get_paciente_by_cpf, name='get-paciente-cpf'),
+
+    #path('update/', views.atualiza_dado_banco, name='update'),
+
+    #path('delete/', views.deleta_dado_banco, name='delete'),
 ]

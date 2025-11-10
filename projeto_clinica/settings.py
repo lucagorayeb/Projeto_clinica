@@ -31,13 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'clinica.apps.ClinicaConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'clinica.apps.ClinicaConfig',
+    'corsheaders',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'projeto_clinica.urls'
@@ -73,12 +76,18 @@ WSGI_APPLICATION = 'projeto_clinica.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+    
 DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'teste_clinica',
-    }
-}
+          'default': {
+              'ENGINE': 'django.db.backends.mysql',
+              'NAME': 'clinica',
+              'USER': 'root',
+              'PASSWORD': 'senha$123',
+              'HOST': 'localhost',
+              'PORT': '3306',
+          }
+      }
+
 
 
 # Password validation
@@ -103,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 
@@ -121,3 +130,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#CORS_ORIGINS_ALLOW_ALL = True
+CORS_ALLOW_ORIGINS = [
+    'http://127.0.0.1:8000/',
+]

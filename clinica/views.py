@@ -1,4 +1,95 @@
 from django.shortcuts import render
+from django.http import HttpResponse, JsonResponse
+
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+from rest_framework import status
+from .models import Paciente
+from .serializers import PacienteSerializer
+import json
+
+@api_view (['GET'])
+def get_pacientes(request):
+    if request.method == 'GET':
+        pacientes = Paciente.objects.all()
+
+        serializer = PacienteSerializer(pacientes, many=True)
+        return Response(serializer.data)
+    
+    return Response(status=status.HTTP_400_BAD_REQUEST)
+
+@api_view (['GET', 'PUT'])
+def get_paciente_by_nome(request, name):
+
+    try:
+        paciente_name = Paciente.objects.get(pk=name)
+    except:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+    
+    if request.method == 'GET':
+            serializer = PacienteSerializer(paciente_name)
+            return Response(serializer.data)
+    
+    if request.method == 'PUT':
+        serializer = PacienteSerializer(paciente_name, data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
+        return Response(status=status.HTTP_400_BAD_REQUEST)
+
+    
+@api_view(['GET', 'POST', 'PUT', 'DELETE'])
+def paciente_manager(request):
+
+    if request.method == 'GET':
+        try:
+            if request.GET['paciente']:
+                paciente_nome = request.GET['paciente']
+                try:
+                    paciente = Paciente.objects.get(pk=paciente_nome)
+                except:
+                    return Response(status=status.HTTP_404_NOT_FOUND)
+                serializer = PacienteSerializer(paciente)
+                return Response(serializer.data)
+        except:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+    
+    if request.method == 'POST':
+        new_paciente = request.data
+        serializer = PacienteSerializer(data=new_paciente)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(status=status.HTTP_400_BAD_REQUEST)
+    
+    if request.method == 'PUT':
+        paciente = request.data['nome']
+
+        try:
+            update_paciente = Paciente.objects.get(pk=paciente)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        
+        print(f'Data = {request.data}')
+
+        serializer = PacienteSerializer(update_paciente, data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
+        return Response(status=status.HTTP_400_BAD_REQUEST)
+    
+    if request.method == 'DELETE':
+        try:
+            paciente_to_delete = Paciente.objects.get(pk=request.data['nome'])
+            paciente_to_delete.delete()
+            return Response(status=status.HTTP_202_ACCEPTED)
+        except:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+
 
 def home(request):
     return render(request, 'clinica/public/home.html')
@@ -50,5 +141,7 @@ def ortognatica(request):
 
 def expansao_maxila(request):
     return render(request, 'clinica/public/desease/expansao_maxila.html')
+
+
 
 
