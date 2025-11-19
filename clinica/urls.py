@@ -32,10 +32,6 @@ urlpatterns = [
 
     path('desease/traumas_face', views.traumas_face, name='clinica-traumas-face'),
 
-    path('desease/ortognatica', views.ortognatica, name='clinica-ortognatica'),
-
-    path('desease/expansao_maxila', views.expansao_maxila, name='clinica-expansao-maxila'),
-
     path('get/', views.get_pacientes, name='get-pacientes'),
 
     path('get/<str:name>', views.get_paciente_by_nome, name='get-paciente-name'),
