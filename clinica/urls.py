@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .autocomplete import PacienteAutocomplete
 
 urlpatterns = [
     path('', views.home, name='clinica-home'),
@@ -40,11 +41,7 @@ urlpatterns = [
 
     path('get/<str:name>', views.get_paciente_by_nome, name='get-paciente-name'),
 
-    path('data/', views.paciente_manager)
+    path('data/', views.paciente_manager, name='paciente-manager'),
 
-    #path ('get/<str:cpf>', views.get_paciente_by_cpf, name='get-paciente-cpf'),
-
-    #path('update/', views.atualiza_dado_banco, name='update'),
-
-    #path('delete/', views.deleta_dado_banco, name='delete'),
-]
+    path("paciente-autocomplete/", PacienteAutocomplete.as_view(), name="paciente-autocomplete",),
+    ]
