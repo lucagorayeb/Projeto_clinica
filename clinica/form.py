@@ -7,7 +7,7 @@ class AgendamentoForm(forms.ModelForm):
         model = Agendamento
 
         fields = ['id_agendamento','Data_do_Agendamento', 'Data_da_Consulta', 'Tipo_da_Consulta', 'Qual_Plano',
-                   'Carteira_do_Plano', 'Valor_da_Consulta', 'Emitiu_Nota_Fiscal', 'Queixa_do_Paciente']
+                   'Carteira_do_Plano', 'Valor_da_Consulta', 'Emitiu_Nota_Fiscal', 'Queixa_do_Paciente', 'data_do_retorno', 'paciente_agendamento']
         
         labels = {
             'Data_do_Agendamento': 'Data do Agendamento',
@@ -18,6 +18,8 @@ class AgendamentoForm(forms.ModelForm):
             'Valor_da_Consulta': 'Valor da Consulta',
             'Emitiu_Nota_Fiscal': 'Emitiu nota fiscal',
             'Queixa_do_Paciente': 'Queixa do paciente',
+            'data_do_retorno': 'Data do Retorno',
+            'paciente_agendamento': 'Paciente',
             }
         
         widgets = {
@@ -29,5 +31,6 @@ class AgendamentoForm(forms.ModelForm):
             'Valor_da_Consulta': forms.NumberInput(attrs={'step': '50.00'}),
             'Emitiu_Nota_Fiscal': forms.Select(),
             'Queixa_do_Paciente': forms.Textarea(attrs={'rows':5, 'cols':50}),
+            'data_do_retorno': forms.DateInput(attrs={'type': 'date'}),
         }
         

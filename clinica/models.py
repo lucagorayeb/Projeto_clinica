@@ -1,6 +1,6 @@
 from django.db import models
 from multiselectfield import MultiSelectField
-from .enums import SexoPaciente, SimOuNao, ParticularOuConvenio, PlanosDeSaude, ConsultaRealizada, Exames, ProfissionaisParaEncaminhar
+from .enums import SexoPaciente, SimOuNao, ParticularOuConvenio, PlanosDeSaude, ConsultaRealizada, Exames, ProfissionaisParaEncaminhar, RetornoRealizado
 
 class Paciente(models.Model):
 
@@ -27,11 +27,22 @@ class Consulta(models.Model):
     Paciente_Trouxe_Exames = models.CharField(max_length=5, choices=SimOuNao)   
     Exames_Trazidos = MultiSelectField(choices=Exames.choices, max_length=100, blank=True)
     Laudos_dos_Exames_Trazidos = models.CharField(max_length=2000) 
-    Achados_do_Primeiro_Check_UP = models.CharField(max_length=2000)
+    achados_clinicos_da_consulta = models.CharField(max_length=2000)
     Conduta = models.CharField(max_length=2000)
     Encaminhado_para_Outro_Profissional = models.CharField(max_length=5, choices=SimOuNao)
     Profissional_Encaminhado = models.CharField(max_length=70, choices=ProfissionaisParaEncaminhar)
-    Estimativa_da_Diagnose = models.CharField(max_length=2000)
+    estimativa_diagnostico = models.CharField(max_length=2000)
+    exames_solicitados = MultiSelectField(choices=Exames.choices, max_length=100, blank=True)
+
+    # Retorno fields
+    retorno_realizado = models.CharField(max_length=15, choices= RetornoRealizado, default=RetornoRealizado.pendente)
+    Laudos_dos_Exames_solicitados = models.CharField(max_length=2000) 
+    achados_clinicos_do_retorno = models.CharField(max_length=2000)
+    Encaminhado_para_Outro_Profissional_retorno = models.CharField(max_length=5, choices=SimOuNao)
+    Profissional_Encaminhado_retorno = models.CharField(max_length=70, choices=ProfissionaisParaEncaminhar)
+    confimacao_diagnostico = models.CharField(max_length=2000)
+    conduta_retorno = models.CharField(max_length=2000)
+    
     paciente_consulta = models.ForeignKey(Paciente, on_delete=models.CASCADE, null=True, blank=True)
     def __str__(self):
         return f'{self.paciente_consulta}'
@@ -48,6 +59,7 @@ class Agendamento(models.Model):
     Valor_da_Consulta = models.DecimalField(decimal_places=2, max_digits=6)
     Emitiu_Nota_Fiscal = models.CharField(max_length=5, choices=SimOuNao)
     Queixa_do_Paciente = models.CharField(max_length=2000)
+    data_do_retorno = models.DateField()
     paciente_agendamento = models.ForeignKey(Paciente, on_delete=models.CASCADE, related_name='agendamentos')
     def __str__(self):
         return f'{self.paciente_agendamento}'

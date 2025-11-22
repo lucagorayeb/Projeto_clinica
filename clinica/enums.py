@@ -22,6 +22,12 @@ class ConsultaRealizada(models.TextChoices):
     faltou = 'Faltou'
     desistiu = 'Desistiu'
 
+class RetornoRealizado(models.TextChoices):
+    pendente = 'Pendente'
+    sim = 'Sim'
+    cancelou = 'Cancelou'
+    faltou = 'Faltou'
+
 class Exames(models.TextChoices):
     tc_de_maxila_tipo_cone_beam = "TC DE MAXILA - TIPO CONE BEAM"
     tc_de_mandibula_tipo_cone_beam_virtual = "TC DE MANDÍBULA - TIPO CONE BEAM POR MEIO VIRTUAL OU POR E-MAIL"
@@ -73,5 +79,6 @@ class ProfissionaisParaEncaminhar(models.TextChoices):
     dentistica_estetica = "DENTÍSTICA - ESTÉTICA"
     dr_antonio_jorge = "DR. ANTÔNIO JORGE"
     dr_miguel_ledo = "DR. MIGUEL LEDO"
+
 
 
