@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Paciente, Agendamento, Consulta
-from .form import AgendamentoForm
+from .form import AgendamentoForm, ConsultaForm
 
 
 class PacienteAdmin(admin.ModelAdmin):
@@ -33,6 +33,7 @@ class AgendamentoAdmin(admin.ModelAdmin):
     autocomplete_fields = ['paciente_agendamento']
 
 class ConsultaAdmin(admin.ModelAdmin):
+    form = ConsultaForm
     list_display = ['paciente_consulta', 'Consulta_Realizada', 'retorno_realizado']
 
     fieldsets = (
