@@ -67,20 +67,59 @@ class ConsultaForm(forms.ModelForm):
         widgets = {
             'Consulta_Realizada': forms.Select(),
             'Paciente_Trouxe_Exames': forms.Select(),
-            'Exames_Trazidos': forms.CheckboxSelectMultiple(),
+            'Exames_Trazidos': forms.CheckboxSelectMultiple(attrs={'class':'exames-checkbox'}),
             'Laudos_dos_Exames_Trazidos': forms.Textarea(attrs={'rows':5, 'cols':50}),
             'achados_clinicos_da_consulta': forms.Textarea(attrs={'rows':5, 'cols':50}),
             'Conduta': forms.Textarea(attrs={'rows':5, 'cols':50}),
             'Encaminhado_para_Outro_Profissional': forms.Select(),
-            'Profissional_Encaminhado': forms.CheckboxSelectMultiple(),
+            'Profissional_Encaminhado': forms.CheckboxSelectMultiple(attrs={'class':'profissionais-checkbox'}),
             'estimativa_diagnostico': forms.Textarea(attrs={'rows':5, 'cols':50}),
-            'exames_solicitados': forms.CheckboxSelectMultiple(),
+            'exames_solicitados': forms.CheckboxSelectMultiple(attrs={'class':'exames-checkbox'}),
             'retorno_realizado': forms.Select(),
             'Laudos_dos_Exames_solicitados': forms.Textarea(attrs={'rows':5, 'cols':50}),
             'achados_clinicos_do_retorno': forms.Textarea(attrs={'rows':5, 'cols':50}),
             'Encaminhado_para_Outro_Profissional_retorno': forms.Select(),
-            'Profissional_Encaminhado_retorno': forms.CheckboxSelectMultiple(),
+            'Profissional_Encaminhado_retorno': forms.CheckboxSelectMultiple(attrs={'class':'profissionais-checkbox'}),
             'confimacao_diagnostico': forms.Textarea(attrs={'rows':5, 'cols':50}),
             'conduta_retorno': forms.Textarea(attrs={'rows':5, 'cols':50}),
         }
         
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.fields['exames_trazidos'].widget.attrs['class'] = 'exames-container'
+
+class PacienteForm(forms.ModelForm):
+    class Meta:
+        model = Paciente
+
+        fields = ['id_paciente', 'nome', 'CPF', 'RG', 'Data_Nascimento', 'sexo', 'contato', 'logradouro', 'numero', 'bairro', 'CEP', 'cidade', 'estado']
+        
+        variaveis_paciente = {
+            'nome': 'Nome',
+            'CPF': 'CPF',
+            'RG': 'RG',
+            'Data_Nascimento': 'Data de Nascimento',
+            'sexo': 'Sexo',
+            'contato': 'Contato',
+            'logradouro': 'Logradouro',
+            'numero': 'Número',
+            'bairro': 'Bairro',
+            'CEP': 'CEP',
+            'cidade': 'Cidade',
+            'estado': 'Estado',
+        }
+        
+        widgets = {
+            'nome': forms.TextInput(attrs={'maxlength': '100'}),
+            'CPF': forms.TextInput(attrs={'maxlength': '14'}),
+            'RG': forms.TextInput(attrs={'maxlength': '14'}),
+            'Data_Nascimento': forms.DateInput(attrs={'type': 'date'}),
+            'sexo': forms.Select(),
+            'contato': forms.TextInput(attrs={'maxlength': '16'}),
+            'logradouro': forms.TextInput(attrs={'maxlength': '100'}),
+            'numero': forms.NumberInput(),
+            'bairro': forms.TextInput(attrs={'maxlength': '100'}),
+            'CEP': forms.TextInput(attrs={'maxlength': '9'}),
+            'cidade': forms.TextInput(attrs={'maxlength': '100'}),
+            'estado': forms.TextInput(attrs={'maxlength': '2'}),
+        }

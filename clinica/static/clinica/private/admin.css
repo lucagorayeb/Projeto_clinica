@@ -1,0 +1,11 @@
+.profissionais-checkbox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.exames-checkbox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}

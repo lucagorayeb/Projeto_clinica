@@ -1,9 +1,10 @@
 from django.contrib import admin
 from .models import Paciente, Agendamento, Consulta
-from .form import AgendamentoForm, ConsultaForm
+from .form import AgendamentoForm, ConsultaForm, PacienteForm
 
 
 class PacienteAdmin(admin.ModelAdmin):
+    form = PacienteForm
     list_display = [ 'nome', 'CPF']
 
     fieldsets = (
@@ -11,7 +12,7 @@ class PacienteAdmin(admin.ModelAdmin):
             'fields': ('nome', 'CPF', 'RG', 'Data_Nascimento', 'sexo', 'contato')
         }),
         ('Endereço', {
-            'fields': ('logradouro', 'lote', 'bairro', 'CEP', 'cidade', 'estado')
+            'fields': ('logradouro', 'numero', 'bairro', 'CEP', 'cidade', 'estado')
         }),
     )
     search_fields = ['nome']
@@ -52,6 +53,13 @@ class ConsultaAdmin(admin.ModelAdmin):
         }),
     )
     autocomplete_fields = ['paciente_consulta']
+
+    class Media:
+        css = {
+            'all': ('clinica/static/private/admin.css',)
+        }
+
+        js = ('clinica/static/private/admin.js',)
 
 
 admin.site.register(Paciente, PacienteAdmin)

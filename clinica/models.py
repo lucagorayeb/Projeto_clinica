@@ -12,7 +12,7 @@ class Paciente(models.Model):
     sexo = models.CharField(max_length=1, choices=SexoPaciente, default=SexoPaciente.outro)
     contato = models.CharField(max_length=16)
     logradouro = models.CharField(max_length=100, null=False)
-    lote = models.IntegerField(null=False)
+    numero = models.IntegerField(null=False)
     bairro = models.CharField(max_length=100, null=False)
     CEP = models.CharField(max_length=9, null=False)
     cidade = models.CharField(max_length=100, null=False)
