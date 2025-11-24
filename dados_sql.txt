@@ -1,0 +1,76 @@
+# Aba para criar tabelas
+show databases;
+use clinica;
+show tables;
+
+create table clinica_paciente(
+        id_paciente int auto_increment,
+    nome varchar(100) unique not null,
+    cpf char(14) not null,
+    rg char(14) not null,
+    data_nascimento date not null,
+    sexo enum('M','F','O') not null,
+    contato varchar(16) not null,
+        logradouro varchar(100) not null,
+        lote int not null,
+        bairro varchar(50) not null,
+        cep char(9) not null,
+        cidade varchar(100) not null,
+        estado varchar(100) not null,
+    primary key(id_paciente)
+);
+
+create table clinica_agendamento(
+    id_agendamento int auto_increment,
+    Data_do_Agendamento date not null,
+    Tipo_da_Consulta enum('Particular','Convênio') not null,
+    Qual_Plano enum('Bradesco'),
+    Carteira_do_Plano varchar(15),
+    Data_da_Consulta date not null,
+    Valor_da_Consulta decimal(10,2) not null,
+    Emitiu_Nota_Fiscal enum('Sim','Não') not null,
+    Queixa_do_Paciente varchar(2000) not null,
+    data_do_retorno date not null,
+    primary key (id_agendamento)
+);
+
+create table clinica_consulta(
+        id_consulta int auto_increment,
+    Consulta_Realizada set('Sim', 'Cancelou', 'Faltou', 'Desistiu') not null,
+    Paciente_Trouxe_Exames enum('Sim','Não') not null,
+    Exames_Trazidos set('TC DE MAXILA - TIPO CONE BEAM','TC DE MANDÍBULA - TIPO CONE BEAM POR MEIO VIRTUAL OU POR E-MAIL','TC CONE BEAM COM TRAÇADO PARA IMPLANTES','RX DE FACE PO','RADIOGRAFIA OCLUSAL','RADIOGRAFIA PERIAPICAL','RADIOGRAFIA PANORÂMICA SEM LAUDO','RADIOGRAFIA PANORÂMICA COM LAUDO','RX PERFIL DE FACE','RX PA DE MANDÍBULA','RX WATER''S','RESSONÂNCIA MAGNÉTICA DE ATM','RESSONÂNCIA MAGNÉTICA DE MAXILA','RESSONÂNCIA MAGNÉTICA DE MANDÍBULA','ULTRASSONOGRAFIA DE GLÂNDULA SUBMANDIBULAR','ULTRASSONOGRAFIA DE GLÂNDULA PARÓTIDA','TC DE SEIOS DA FACE','TC DE FACE','TC DE FACE EM 3D','TC DE MAXILA','TC DE MANDÍBULA','TC DE MANDÍBULA - ATM','EXAMES SOLICITADOS POR OUTRO PROFISSIONAL','EXAMES ORTOGNÁTICA - USP/MC NAMARA/ UNICAMP','TUÁRIO','ULTRASSONOGRAFIA'),
+        Laudos_dos_Exames_Trazidos varchar(2000),
+    achados_clinicos_da_consulta varchar(2000),
+    Encaminhado_para_Outro_Profissional enum('Sim','Não') not null,
+    Profissional_Encaminhado set ('NÃO','ENDODONTIA','FISIOTERAPIA','CIRURGIÃO PLÁSTICO','OTORRINO','NEUROCLÍNICO','NEUROCIRURGIA','PSICÓLOGO','PSIQUIATRA','NEFROLOGISTA','CARDIOLOGISTA','PROTESISTA','FONO','ORTODONTISTA','DRA. SÂMYA CABRAL','DRA. MÔNICA TAIRA','DRA. HOSANA BAIMA','DRA. GISELE GONZAGA','DENTÍSTICA - ESTÉTICA','DR. ANTÔNIO JORGE','DR. MIGUEL LEDO'),
+    estimativa_diagnostico varchar(2000),
+        Conduta varchar(2000),
+    exames_solicitados set('TC DE MAXILA - TIPO CONE BEAM','TC DE MANDÍBULA - TIPO CONE BEAM POR MEIO VIRTUAL OU POR E-MAIL','TC CONE BEAM COM TRAÇADO PARA IMPLANTES','RX DE FACE PO','RADIOGRAFIA OCLUSAL','RADIOGRAFIA PERIAPICAL','RADIOGRAFIA PANORÂMICA SEM LAUDO','RADIOGRAFIA PANORÂMICA COM LAUDO','RX PERFIL DE FACE','RX PA DE MANDÍBULA','RX WATER''S','RESSONÂNCIA MAGNÉTICA DE ATM','RESSONÂNCIA MAGNÉTICA DE MAXILA','RESSONÂNCIA MAGNÉTICA DE MANDÍBULA','ULTRASSONOGRAFIA DE GLÂNDULA SUBMANDIBULAR','ULTRASSONOGRAFIA DE GLÂNDULA PARÓTIDA','TC DE SEIOS DA FACE','TC DE FACE','TC DE FACE EM 3D','TC DE MAXILA','TC DE MANDÍBULA','TC DE MANDÍBULA - ATM','EXAMES SOLICITADOS POR OUTRO PROFISSIONAL','EXAMES ORTOGNÁTICA - USP/MC NAMARA/ UNICAMP','TUÁRIO','ULTRASSONOGRAFIA'),
+        retorno_realizado enum('Sim', 'Pendente', 'Cancelou', 'Faltou'),
+    Laudos_dos_Exames_solicitados varchar(2000),
+    achados_clinicos_do_retorno varchar(2000),
+    Encaminhado_para_Outro_Profissional_retorno enum('Sim','Não') not null,
+    Profissional_Encaminhado_retorno set ('NÃO','ENDODONTIA','FISIOTERAPIA','CIRURGIÃO PLÁSTICO','OTORRINO','NEUROCLÍNICO','NEUROCIRURGIA','PSICÓLOGO','PSIQUIATRA','NEFROLOGISTA','CARDIOLOGISTA','PROTESISTA','FONO','ORTODONTISTA','DRA. SÂMYA CABRAL','DRA. MÔNICA TAIRA','DRA. HOSANA BAIMA','DRA. GISELE GONZAGA','DENTÍSTICA - ESTÉTICA','DR. ANTÔNIO JORGE','DR. MIGUEL LEDO'),
+    confimacao_diagnostico varchar(2000),
+    conduta_retorno varchar(2000),
+        primary key (id_consulta)
+);
+
+
+drop table clinica_paciente;
+drop table clinica_consulta;
+drop table clinica_agendamento;
+
+# Alterações nas tabelas
+alter table clinica_agendamento add column paciente_agendamento_id int;
+alter table clinica_agendamento add constraint paciente_agendamento_id foreign key(paciente_agendamento_id) references clinica_paciente(id_paciente);
+alter table clinica_consulta add column paciente_consulta_id int;
+alter table clinica_consulta add constraint paciente_consulta_id foreign key(paciente_consulta_id) references clinica_paciente(id_paciente);
+
+# Aba para fazer os selects das tabelas
+select * from clinica_paciente;
+select * from clinica_agendamento;
+select * from clinica_consulta;
+
+
+
