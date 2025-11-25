@@ -31,13 +31,13 @@ urlpatterns = [
 
     path('desease/atm', views.atm, name='clinica-atm'),
 
-    path('desease/traumas_face', views.traumas_face, name='clinica-traumas-face'),
+    path("paciente-autocomplete/", PacienteAutocomplete.as_view(), name="paciente-autocomplete"),
 
-    path('get/', views.get_pacientes, name='get-pacientes'),
 
-    path('get/<str:name>', views.get_paciente_by_nome, name='get-paciente-name'),
+    #path('get/', views.get_pacientes, name='get-pacientes'),
 
-    path('data/', views.paciente_manager, name='paciente-manager'),
+    #path('get/<str:name>', views.get_paciente_by_nome, name='get-paciente-name'),
 
-    path("paciente-autocomplete/", PacienteAutocomplete.as_view(), name="paciente-autocomplete",),
+    #path('data/', views.paciente_manager, name='paciente-manager'),
+    
     ]

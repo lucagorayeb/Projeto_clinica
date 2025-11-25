@@ -9,7 +9,7 @@ from .models import Paciente
 from .serializers import PacienteSerializer
 import json
 
-@api_view (['GET'])
+""" @api_view (['GET'])
 def get_pacientes(request):
     if request.method == 'GET':
         pacientes = Paciente.objects.all()
@@ -88,7 +88,7 @@ def paciente_manager(request):
             paciente_to_delete.delete()
             return Response(status=status.HTTP_202_ACCEPTED)
         except:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
+            return Response(status=status.HTTP_400_BAD_REQUEST) """
 
 
 def home(request):
@@ -132,9 +132,6 @@ def implantes(request):
 
 def atm(request):
     return render(request, 'clinica/public/desease/atm.html')
-
-def traumas_face(request):
-    return render(request, 'clinica/public/desease/traumas_face.html')
 
 
 
