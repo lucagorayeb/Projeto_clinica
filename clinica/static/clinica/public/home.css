@@ -1,0 +1,70 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #34495e;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.home-container {
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+}
+
+.home-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.home-container h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.home-container ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.home-container ul li{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.p-final {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+
+footer {
+    background: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 1rem 0px 1rem;
+    width: 100vw;
+    position: fixed; /* Mantém o elemento fixo na tela */
+    bottom: 0;       /* Posiciona o footer na parte inferior da tela */
+    left: 0;         /* Garante que ele comece no canto esquerdo */
+    z-index: 1000;   /* Garante que o footer fique acima de outros elementos, se houver */
+}
