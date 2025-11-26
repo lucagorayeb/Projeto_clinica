@@ -1,190 +1,174 @@
 {% extends "clinica/public/base.html" %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/desease/main_desease.css' %}">
-    <div>
+<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/main_desease.css' %}">
+<div class="desease-container">
+    <div class="desease-container-internal">
         <h1>Implantes</h1>
-        
+    
         <h3>O que são?</h3>
-
         <p>Implantes dentários são pequenas estruturas que funcionam como uma nova raiz para o dente perdido. Eles são como "pinos" inseridos cirurgicamente no osso da sua mandíbula ou maxilar.</p>
-        
+    
         <div>
-            <div class="imagem-centrada" style="margin: 20px 0;">
-                <img src="{% static 'clinica/public/img/implante_dentario.jpeg' %}" 
-                alt="Imagem ilustrativa de um implante dentário" style="max-width: 90%; height: auto; border-radius: 8px;">
+            <div>
+                <img src="{% static 'clinica/public/img/implante_dentario.jpeg' %}"
+                alt="Imagem ilustrativa de um implante dentário">
             </div>
         </div>
-        
+    
         <p><b>Aspecto Técnico:</b> Estes dispositivos são feitos de um material especial, geralmente titânio, escolhido por ser biocompatível — ou seja, é totalmente aceito pelo seu organismo, minimizando rejeição.</p>
-
         <h3>Como eles se fixam?</h3>
-
         <p>O grande segredo do implante é a Osseointegração. Este é um processo natural e essencial: o seu osso cresce e se une diretamente à superfície do implante de titânio, travando-o de forma estável e segura.</p>
-
         <h3>Qual é a função?</h3>
-
         <p>Uma vez que o implante está osseointegrado, ele se torna uma base sólida para fixar a prótese dentária (o "dente" artificial que fica visível, seja uma coroa, ponte ou dentadura).</p>
-
         <ul>
             <h4>Benefícios Essenciais:</h4>
             <li><p><b>Restauração Funcional:</b> Devolvem a capacidade de mastigar e falar com conforto e segurança.</p></li>
             <li><p><b>Estética:</b> Permitem a criação de um sorriso natural e harmonioso.</p></li>
             <li><p><b>Preservação Óssea:</b> Ao imitar a raiz natural, os implantes estimulam o osso e ajudam a prevenir sua reabsorção (perda de volume), que é comum quando há dentes ausentes.</p></li>
         </ul>
-    </div>    
-
-    <div>
-        <h2>Implantes Dentários</h2>
-
-        <div>
-            <p>O sorriso é um dos nossos maiores cartões de visita. Quando falta um dente, não é apenas a estética que é afetada — a mastigação, a fala e até a autoestima também podem sofrer.</p>
-            
-            <p>De acordo com o cirurgiãodentista Wilson Roberto Sendyk, da Universidade de São Paulo (USP), pessoas que perderam dentes podem se tornar mais tímidas, sentindo dificuldade para se relacionar ou até para conseguir emprego, pois a falta de dentes pode ser associada à falta de cuidados pessoais.</p>
-            <p>Se esse é o seu caso, conheça as principais informações sobre os implantes dentários e entenda como esse tratamento pode devolver sua saúde bucal e confiança ao sorrir.</p>
-            <h3>O que são implantes dentários?</h3>
-            <p>Os implantes dentários são pequenas estruturas feitas de titânio, um material biocompatível (ou seja, aceito pelo organismo), que funcionam como a raiz artificial de um dente.</p>
-            <p>Eles são fixados cirurgicamente no osso da mandíbula ou da maxila, e servem de base para a colocação de uma coroa dentária (a parte visível do dente).</p>
-        </div>
-
-        <div class="imagem-centrada" style="margin: 20px 0;">
-            <img src="{% static 'clinica/public/img/implante_dentario_2.jpeg' %}" 
-            alt="Imagem ilustrativa de um implante dentário" style="max-width: 90%; height: auto; border-radius: 8px;">
-        </div>
-
-        <div>
-            <h3>O que é a osseointegração?</h3>
-            <p>
-                A osseointegração é o processo pelo qual o osso se une firmemente ao implante de titânio, tornandoo estável e seguro.
-                Esse fenômeno foi descoberto na década de 1960 pelo pesquisador PerIngvar Brånemark e é o que garante o sucesso dos implantes modernos.
-                Durante esse processo, as células ósseas crescem em contato direto com o titânio, sem formação de tecido fibroso entre eles, resultando em uma união forte e duradoura.
-            </p>
-        </div>
-
-        <div>
-            <h3>Perguntas Frequentes sobre Implantes Dentários</h3>
-            <ul>
-                <li>
-                    <h4>Qualquer pessoa pode colocar implante?</h4>
-                    <p>Nem sempre. Pessoas que fumam em excesso, têm diabetes não controlada, osteoporose grave, hepatite, câncer em tratamento ou que não seguem as orientações médicas podem não ser candidatas ideais. O dentista avalia cada caso individualmente.</p>
-                </li>
-                <li>
-                    <h4>O que acontece se eu não substituir o dente perdido?</h4>
-                    <p>
-                        Os dentes vizinhos tendem a se inclinar para o espaço vazio, comprometendo a mordida e o alinhamento.
-                        Com o tempo, o osso da região pode reabsorver (diminuir), alterando o formato do rosto — o queixo se aproxima do nariz, dando aparência de envelhecimento.
-                        Além disso, a pessoa passa a preferir alimentos moles e calóricos, o que pode prejudicar a nutrição.
-                    </p>
-                </li>
-                <li>
-                    <h4>Quais são as principais causas da perda dentária?</h4>
-                    <p>Em adultos jovens, a causa mais comum são as cáries. Já em adultos e idosos, a doença periodontal (infecção da gengiva e dos tecidos de suporte do dente) é a principal responsável.</p>
-                </li>
-                <li>
-                    <h4>O que é necessário antes da cirurgia?</h4>
-                    <p>
-                        O paciente deve passar por uma avaliação com um especialista em implantes.
-                        Serão solicitados exames de imagem, como tomografia e radiografia panorâmica, e prescritos antibióticos e antiinflamatórios preventivos.
-                    </p>
-                </li>
-                <li>
-                    <h4>A cirurgia dói?</h4>
-                    <p>
-                        Não. O procedimento é feito com anestesia local e realizado com técnicas minimamente invasivas.
-                        Em geral, o paciente pode retomar as atividades normais em até 24 horas.
-                    </p>
-                </li>
-                <li>
-                    <h4>Depois de perder um dente, em quanto tempo devo colocar o implante?</h4>
-                    <p>
-                        O ideal é procurar o dentista o mais rápido possível.
-                        Se o dente foi perdido há muito tempo, pode haver perda óssea no local, sendo necessário realizar um enxerto ósseo antes do implante. Esse enxerto ajuda a reconstruir o osso e garantir uma base firme para o pino de titânio.
-                    </p>
-                </li>
-                <li>
-                    <h4>Quanto custa um implante dentário?</h4>
-                    <p>
-                        O valor varia conforme o tipo de implante, a quantidade de dentes e o material utilizado (nacional ou importado).
-                        Os preços podem variar entre R$ 800 e R$ 3.500 por dente, dependendo da complexidade.
-                        Uma alternativa mais acessível é realizar o tratamento em universidades de odontologia, que oferecem valores reduzidos sob supervisão de professores especialistas.
-                    </p>
-                </li>
-                <li>
-                    <h4>Como evitar clínicas de baixa qualidade?</h4>
-                    <p>
-                        Desconfie de preços muito baixos ou de clínicas que forcem o fechamento de contratos e financiamentos com juros altos.
-                        Sempre procure profissionais qualificados e registrados no CRO (Conselho Regional de Odontologia).
-                    </p>
-                </li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Como é feita a cirurgia de implante</h3>
-            <ul>
-                <li><p>Após os exames, o dentista remove os dentes danificados, preservando ao máximo o osso.</p></li>
-                <li><p>Um pino de titânio é colocado no osso, substituindo a raiz do dente.</p></li>
-                <li><p>Após um período de cicatrização e osseointegração (em média 4 meses para a mandíbula e 6 meses para a maxila), é fixado um conector (extensor) no pino.</p></li>
-                <li><p>Por fim, é colocada a coroa dentária, devolvendo o sorriso e a função mastigatória.</p></li>
-            </ul>
-        </div>
-
-        <div>
-            <p>Se houver necessidade de enxerto ósseo, o dentista aguardará alguns meses até que o osso esteja completamente integrado antes de instalar o implante definitivo.</p>
-            <p>
-                Os implantes dentários são hoje uma das soluções mais seguras e duradouras para quem perdeu um ou mais dentes.
-                Eles devolvem a estética, a função mastigatória e a confiança ao sorrir, melhorando significativamente a qualidade de vida do paciente.
-            </p>
-            <p>Com o acompanhamento de um profissional capacitado e os cuidados adequados, o resultado é um sorriso natural, firme e saudável por muitos anos.</p>
-        </div>
-
     </div>
 
-    <div>
+    <div class="desease-container-internal">
+        <h2>Implantes Dentários</h2>
+        <p>O sorriso é um dos nossos maiores cartões de visita. Quando falta um dente, não é apenas a estética que é afetada — a mastigação, a fala e até a autoestima também podem sofrer.</p>
 
-        <h2>Implantes Zigomáticos</h2>
-
+        <p>De acordo com o cirurgiãodentista Wilson Roberto Sendyk, da Universidade de São Paulo (USP), pessoas que perderam dentes podem se tornar mais tímidas, sentindo dificuldade para se relacionar ou até para conseguir emprego, pois a falta de dentes pode ser associada à falta de cuidados pessoais.</p>
+        <p>Se esse é o seu caso, conheça as principais informações sobre os implantes dentários e entenda como esse tratamento pode devolver sua saúde bucal e confiança ao sorrir.</p>
+        <h3>O que são implantes dentários?</h3>
+        <p>Os implantes dentários são pequenas estruturas feitas de titânio, um material biocompatível (ou seja, aceito pelo organismo), que funcionam como a raiz artificial de um dente.</p>
+        <p>Eles são fixados cirurgicamente no osso da mandíbula ou da maxila, e servem de base para a colocação de uma coroa dentária (a parte visível do dente).</p>
         <div>
-            <h3>O que são os Implantes Zigomáticos?</h3>
+        <img src="{% static 'clinica/public/img/implante_dentario_2.jpeg' %}"
+            alt="Imagem ilustrativa de um implante dentário">
+        </div>
+    </div>
+
+    <div class="desease-container-internal">
+        <h3>O que é a osseointegração?</h3>
+        <p>
+            A osseointegração é o processo pelo qual o osso se une firmemente ao implante de titânio, tornandoo estável e seguro.
+            Esse fenômeno foi descoberto na década de 1960 pelo pesquisador PerIngvar Brånemark e é o que garante o sucesso dos implantes modernos.
+            Durante esse processo, as células ósseas crescem em contato direto com o titânio, sem formação de tecido fibroso entre eles, resultando em uma união forte e duradoura.
+        </p>
+    </div>
+    <div class="desease-container-internal">
+        <h3>Perguntas Frequentes sobre Implantes Dentários</h3>
+        <ul>
+            <li>
+                <h4>Qualquer pessoa pode colocar implante?</h4>
+                <p>Nem sempre. Pessoas que fumam em excesso, têm diabetes não controlada, osteoporose grave, hepatite, câncer em tratamento ou que não seguem as orientações médicas podem não ser candidatas ideais. O dentista avalia cada caso individualmente.</p>
+            </li>
+            <li>
+                <h4>O que acontece se eu não substituir o dente perdido?</h4>
+                <p>
+                    Os dentes vizinhos tendem a se inclinar para o espaço vazio, comprometendo a mordida e o alinhamento.
+                    Com o tempo, o osso da região pode reabsorver (diminuir), alterando o formato do rosto — o queixo se aproxima do nariz, dando aparência de envelhecimento.
+                    Além disso, a pessoa passa a preferir alimentos moles e calóricos, o que pode prejudicar a nutrição.
+                </p>
+            </li>
+            <li>
+                <h4>Quais são as principais causas da perda dentária?</h4>
+                <p>Em adultos jovens, a causa mais comum são as cáries. Já em adultos e idosos, a doença periodontal (infecção da gengiva e dos tecidos de suporte do dente) é a principal responsável.</p>
+            </li>
+            <li>
+                <h4>O que é necessário antes da cirurgia?</h4>
+                <p>
+                    O paciente deve passar por uma avaliação com um especialista em implantes.
+                    Serão solicitados exames de imagem, como tomografia e radiografia panorâmica, e prescritos antibióticos e antiinflamatórios preventivos.
+                </p>
+            </li>
+            <li>
+                <h4>A cirurgia dói?</h4>
+                <p>
+                    Não. O procedimento é feito com anestesia local e realizado com técnicas minimamente invasivas.
+                    Em geral, o paciente pode retomar as atividades normais em até 24 horas.
+                </p>
+            </li>
+            <li>
+                <h4>Depois de perder um dente, em quanto tempo devo colocar o implante?</h4>
+                <p>
+                    O ideal é procurar o dentista o mais rápido possível.
+                    Se o dente foi perdido há muito tempo, pode haver perda óssea no local, sendo necessário realizar um enxerto ósseo antes do implante. Esse enxerto ajuda a reconstruir o osso e garantir uma base firme para o pino de titânio.
+                </p>
+            </li>
+            <li>
+                <h4>Quanto custa um implante dentário?</h4>
+                <p>
+                    O valor varia conforme o tipo de implante, a quantidade de dentes e o material utilizado (nacional ou importado).
+                    Os preços podem variar entre R$ 800 e R$ 3.500 por dente, dependendo da complexidade.
+                    Uma alternativa mais acessível é realizar o tratamento em universidades de odontologia, que oferecem valores reduzidos sob supervisão de professores especialistas.
+                </p>
+            </li>
+            <li>
+                <h4>Como evitar clínicas de baixa qualidade?</h4>
+                <p>
+                    Desconfie de preços muito baixos ou de clínicas que forcem o fechamento de contratos e financiamentos com juros altos.
+                    Sempre procure profissionais qualificados e registrados no CRO (Conselho Regional de Odontologia).
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="desease-container-internal">
+        <h3>Como é feita a cirurgia de implante</h3>
+        <ul>
+            <li><p>Após os exames, o dentista remove os dentes danificados, preservando ao máximo o osso.</p></li>
+            <li><p>Um pino de titânio é colocado no osso, substituindo a raiz do dente.</p></li>
+            <li><p>Após um período de cicatrização e osseointegração (em média 4 meses para a mandíbula e 6 meses para a maxila), é fixado um conector (extensor) no pino.</p></li>
+            <li><p>Por fim, é colocada a coroa dentária, devolvendo o sorriso e a função mastigatória.</p></li>
+        </ul>
+        <p>Se houver necessidade de enxerto ósseo, o dentista aguardará alguns meses até que o osso esteja completamente integrado antes de instalar o implante definitivo.</p>
+        <p>
+            Os implantes dentários são hoje uma das soluções mais seguras e duradouras para quem perdeu um ou mais dentes.
+            Eles devolvem a estética, a função mastigatória e a confiança ao sorrir, melhorando significativamente a qualidade de vida do paciente.
+        </p>
+        <p>Com o acompanhamento de um profissional capacitado e os cuidados adequados, o resultado é um sorriso natural, firme e saudável por muitos anos.</p>
+    </div>
+
+    <div class="desease-container-internal">
+        <h3>Implantes Zigomáticos</h3>
+            <h2>O que são os Implantes Zigomáticos?</h2>
             <p>Os Implantes Zigomáticos são parafusos especiais, feitos de titânio (um material totalmente compatível com o corpo), que são usados em casos muito específicos na parte de cima da boca (maxila).</p>
             <p>Diferente dos implantes comuns, que são fixados no osso onde estavam os dentes, estes são muito mais longos e são fixados no osso zigomático — o osso forte que forma a "maçã do rosto".</p>
             <p>Todo o procedimento é feito por um acesso intrabucal, ou seja, por dentro da boca, sem cortes no rosto.</p>
-        </div>
-
-         <div class="imagem-centrada" style="margin: 20px 0;">
-            <img src="{% static 'clinica/public/img/implante_zigomatico.jpeg' %}" 
-            alt="Imagem ilustrativa de um implante dentário" style="max-width: 90%; height: auto; border-radius: 8px;">
-        </div>
-
-
-        <div>
-            <h3>Qual a função deles?</h3>
-            <p>A função desses implantes é servir como uma ancoragem (uma base de sustentação) extremamente sólida para prender uma prótese dentária fixa (os dentes novos).</p>
-            <h3>Para quem este tratamento é indicado?</h3>
-            <ul>
-                <p>A indicação dos implantes zigomáticos é muito restrita e obedece a critérios rigorosos. Eles são uma solução para pacientes que:</p>
-                <li>
-                    <p>Possuem o osso maxilar severamente reabsorvido. Isso significa que o osso da parte superior da boca sofreu uma perda muito grande (ficou muito fino ou baixo) e não tem mais altura ou espessura para suportar implantes tradicionais.</p>
-                </li>
-                <li>
-                    <p>Não podem ou não querem passar por cirurgias de enxerto ósseo (como tirar osso autógeno, ou seja, osso do próprio paciente de outra parte do corpo) ou têm contraindicações para esses enxertos.</p>
-                </li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Como é feito o tratamento?</h3>
-            <ul>
-                <p>Por ser um procedimento complexo, ele exige uma estrutura e uma equipe altamente especializada:</p>
-                <li><p><b>Profissional:</b> A cirurgia deve ser obrigatoriamente realizada por um Cirurgião Buco-Maxilo-Facial, que é o especialista treinado para este tipo de cirurgia avançada.</p></li>
-                <li><p><b>Local:</b> É um procedimento feito em centro cirúrgico de um hospital, sob anestesia geral (o paciente fica dormindo durante toda a cirurgia).</p></li>
-                <li><p><b>Planejamento:</b> Antes da operação, é necessária uma avaliação pré-operatória muito rígida. A equipe inclui também o protesista (dentista especialista em fazer a prótese) e exige exames detalhados, como radiografias e tomografias, além de prototipagem (modelos 3D da face para planejar a cirurgia com precisão).</p></li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>E quando os dentes são colocados?</h3>
-            <p>Uma das maiores vantagens desta técnica é a rapidez. O protocolo protético (a prótese com os dentes fixos) é instalado e entregue ao paciente em até 72 horas (3 dias) após a cirurgia.</p>
-        </div>
+            <div>
+                <img src="{% static 'clinica/public/img/implante_zigomatico.jpeg' %}"
+                alt="Imagem ilustrativa de um implante dentário">
+            </div>
     </div>
+
+    <div class="desease-container-internal">
+        <h3>Qual a função deles?</h3>
+        <p>A função desses implantes é servir como uma ancoragem (uma base de sustentação) extremamente sólida para prender uma prótese dentária fixa (os dentes novos).</p>
+        <h3>Para quem este tratamento é indicado?</h3>
+        <ul>
+            <p>A indicação dos implantes zigomáticos é muito restrita e obedece a critérios rigorosos. Eles são uma solução para pacientes que:</p>
+            <li>
+                <p>Possuem o osso maxilar severamente reabsorvido. Isso significa que o osso da parte superior da boca sofreu uma perda muito grande (ficou muito fino ou baixo) e não tem mais altura ou espessura para suportar implantes tradicionais.</p>
+            </li>
+            <li>
+                <p>Não podem ou não querem passar por cirurgias de enxerto ósseo (como tirar osso autógeno, ou seja, osso do próprio paciente de outra parte do corpo) ou têm contraindicações para esses enxertos.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="desease-container-internal">
+        <h3>Como é feito o tratamento?</h3>
+        <ul>
+            <p>Por ser um procedimento complexo, ele exige uma estrutura e uma equipe altamente especializada:</p>
+            <li><b>Profissional:</b> A cirurgia deve ser obrigatoriamente realizada por um Cirurgião Buco-Maxilo-Facial, que é o especialista treinado para este tipo de cirurgia avançada.</li>
+            <li><b>Local:</b> É um procedimento feito em centro cirúrgico de um hospital, sob anestesia geral (o paciente fica dormindo durante toda a cirurgia).</li>
+            <li><b>Planejamento:</b> Antes da operação, é necessária uma avaliação pré-operatória muito rígida. A equipe inclui também o protesista (dentista especialista em fazer a prótese) e exige exames detalhados, como radiografias e tomografias, além de prototipagem (modelos 3D da face para planejar a cirurgia com precisão).</li>
+        </ul>
+        <h3>E quando os dentes são colocados?</h3>
+        <p>Uma das maiores vantagens desta técnica é a rapidez. O protocolo protético (a prótese com os dentes fixos) é instalado e entregue ao paciente em até 72 horas (3 dias) após a cirurgia.</p>
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-container">
+        <p><b>Bucal Face – 28 anos de cuidado, confiança e sorrisos transformados.</b></p>
+    </div>
+</footer>
 {% endblock content %}

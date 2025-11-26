@@ -1,4 +1,86 @@
 {% extends "clinica/public/base.html" %}
 {% block content %}
-    <h1>Professional Page</h1>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/home.css' %}">
+
+<div class="home-container profile-container">
+    <div class="home-container-internal" >
+      <h1 style="margin-top:0;">Dr. Láwrency Gorayeb</h1>
+      <h2 style="margin-top:0.25rem; margin-bottom:1rem; font-weight:600;">
+        Cirurgião BucoMaxiloFacial e Gestor Clínico | CRO 758/RO
+      </h2>
+
+      <p>
+        Com quase três décadas de atuação dedicada à Odontologia, o <strong>Dr. Láwrency Gorayeb</strong> é o alicerce da Bucal Face
+        e uma referência quando o assunto é precisão cirúrgica, cuidado humanizado e excelência profissional. Desde o início de sua
+        carreira, em 1997, ele construiu uma trajetória marcada pela busca contínua por técnicas modernas, atendimento responsável e
+        resultados que priorizam a qualidade de vida dos pacientes.
+      </p>
+
+      <p>
+        Formado em Odontologia e especialista em <strong>Cirurgia e Traumatologia BucoMaxiloFacial</strong> pela UNIFENAS (2003),
+        o Dr. Láwrency acumulou vasta experiência em procedimentos de baixa, média e alta complexidade, atuando tanto em consultório
+        quanto em ambiente hospitalar. Seu trabalho se apoia em dois pilares essenciais:
+      </p>
+    </div>
+
+      <div class="home-container-internal">
+          <h3 style="margin-top:1.2rem;">Cirurgias Avançadas em Consultório</h3>
+          <p>
+            Realizadas sob anestesia local, com total segurança, conforto e atenção individualizada. Entre suas especialidades destacam-se:
+          </p>
+          <ul>
+            <li>Extrações de dentes complexos, incluindo terceiros molares (siso);</li>
+            <li>Colocação de implantes dentários com precisão e previsibilidade;</li>
+            <li>Enxertos ósseos para reabilitações completas;</li>
+            <li>Remoção de cistos e outras lesões intraorais;</li>
+            <li>Procedimentos cirúrgicos que exigem técnica apurada e recuperação otimizada.</li>
+          </ul>
+          <p>
+            A combinação entre experiência, tecnologia e abordagem detalhista garante resultados seguros, estáveis e confortáveis para o paciente.
+          </p>
+      </div>
+
+      <div class="home-container-internal">
+          <h3 style="margin-top:1.2rem;">Procedimentos Complexos em Ambiente Hospitalar</h3>
+          <p>
+            Para casos que necessitam de anestesia geral, o Dr. Láwrency atua em intervenções de alta complexidade, incluindo:
+          </p>
+          <ul>
+            <li>Tratamento e reabilitação de fraturas dos ossos da face;</li>
+            <li>Cirurgias da ATM (Articulação TêmporoMandibular);</li>
+            <li>Correções estruturais e funcionais que devolvem equilíbrio, estética e qualidade mastigatória.</li>
+          </ul>
+          <p>
+            Essas intervenções exigem profundo conhecimento técnico e integração com equipes multidisciplinares — área na qual ele se destaca pela
+            postura ética e precisão cirúrgica.
+          </p>
+      </div>
+
+    <div class="home-container-internal">
+      <h3 style="margin-top:1.2rem;">Gestão Clínica e Filosofia de Trabalho</h3>
+      <p>
+        Além da atuação como cirurgião, o Dr. Láwrency é o <strong>Gestor Clínico da Bucal Face</strong>, conduzindo a equipe com foco em:
+      </p>
+      <ul>
+        <li>Excelência em protocolos;</li>
+        <li>Ética profissional;</li>
+        <li>Segurança em cada etapa do atendimento;</li>
+        <li>Humanização e acolhimento do paciente;</li>
+        <li>Atualização constante em tecnologias e métodos de tratamento.</li>
+      </ul>
+
+      <p class="p-final">
+        Seu compromisso vai além da estética: o objetivo é transformar vidas, devolvendo bem-estar, saúde e autoconfiança a cada paciente
+        que passa pela clínica.
+      </p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <p><b>Bucal Face – 28 anos de cuidado, confiança e sorrisos transformados.</b></p>
+    </div>
+</footer>
+
 {% endblock content %}

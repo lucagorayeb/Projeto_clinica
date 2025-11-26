@@ -1,23 +1,23 @@
 {% extends "clinica/public/base.html" %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/desease/main_desease.css' %}">
-    <div>
+<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/main_desease.css' %}">
+<div class="desease-container">
+    <div class="desease-container-internal">
         <h1>Enxertos Ósseos	</h1>
-
+    
         <p>
             Dentre as principais queixas dos pacientes desdentados parciais posteriores estão o desconforto pelo uso de próteses removíveis, o volume da prótese, o comprometimento estético, a deficiência na função mastigatória e a influência na sua vida sócio-cultural. Por isso os implantes dentais vêm se destacando como excelente e promissor método terapêutico para se obter uma adequada reabilitação bucal em pacientes edêntulos totais e parciais minimizando estes aspectos negativos (BEZERRA e LENHARO, 2002).
             No entanto o seu sucesso depende de uma quantidade satisfatória de tecido ósseo para a inserção do implante, visto que, depois da perda dos dentes, o processo alveolar maxilar sofre progressiva e irreversível reabsorção, que resulta numa grande perda de substância, tanto vertical quanto horizontal podendo atingir um estagio de pneumatização do seio maxilar, o que contraindica a instalação de implantes ósseointegráveis (LIM et al, 2004), que exige rebordo alveolar com espessura mínima de 5 mm e altura de 10mm (MATTE, 2000).
             Sempre que um dente é "perdido", o remanescente ósseo em torno é reabsorvido, esse processo de reaobsorção óssea ou atrofia, torna o osso mais fino progressivamente tornando a instalação do implante quase que impossível. Existem casos que estes dentes foram perdidos há muitos anos, o que torna necessário a realização de um procedimento para recriar o osso perdido, denominado de enxerto ósseo.
             Os enxertos ósseos podem ser realizados com materiais artificiais, com o osso do próprio paciente (osso autógeno) que é obtido de outra região da boca, com bosn resultados. Pode ser feito em bloco ou fragmentado para elevar a membrana do seio maxilar (levantamento do seio maxilar), por exemplo.
         </p>
-
-        <div class="enxerto-necessidade-container" style="margin: 20px 0;">
-            <img src="{% static 'clinica/public/img/enxerto_osseo_seio_maxilar.jpeg' %}" 
-                 alt="Diagrama comparando osso alveolar saudável, osso atrofiado após perda de dente, e a reconstrução com enxerto ósseo para suporte de implante." 
-                 style="max-width: 90%; height: auto; border-radius: 8px;">
+    
+        <div>
+            <img src="{% static 'clinica/public/img/enxerto_osseo_seio_maxilar.jpeg' %}"
+                    alt="Diagrama comparando osso alveolar saudável, osso atrofiado após perda de dente, e a reconstrução com enxerto ósseo para suporte de implante.">
         </div>
-
+    
         <ul>
             <p>Tipo de Osso:</p>
             <li>A realização de enxerto ósseo possibilita a reconstrução da anatomia e devolve previsibilidade ao tratamento. A neoformação óssea ocorre por três mecanismos: osteogênese, osteoindução e osteocondução (ABRAHAMS, 2000).</li>
@@ -26,9 +26,15 @@
             <li>A osteocondução as células mesenquimais diferenciadas invadem o enxerto, promovendo a formação de cartilagem e em seguida a ossificação (RAGHOEBAR et al., 2005).</li>
             <li>Dentre os materiais de opcção para a realização do enxerto temos: o osso alógeno, materiais aloplásticos (usualmente a hidroxiapatita) e o osso autógeno, que pode ser obtido de áreas extrabucais como: osso ilíaco e calota craniana. Como também de áreas intrabucais como: túber, mento (queixo) região retromolar. Sendo o osso autógeno aquele que apresenta o padrão mais próximo do ideal para a reconstrução desta região (GRAZIANI et al, 2004).</li>
         </ul>
-        
+    
         <p>
-            O critério para a seleção do material para enxerto é determinado pelas seguintes características: capacidade de produção óssea no seio por proliferação celular através de osteoblastos transplantados ou por osteocondução de células da superfície do enxerto, capacidade de produzir osso por osteoindução de células mesenquimais, capacidade do osso inicialmente formado de se transformar em osso medular maduro, manutenção do osso maduro ao longo do tempo sem perda após entrar em função, capacidade para estabilizar implantes quando colocados simultaneamente com enxerto, baixa taxa de infecção, fácil acesso, baixa antigenicidade e alto nível de confiabilidade (SPIEKERMANN, BIESTERFELD e EDELHOFF 2000).  
-        </p>  
+            O critério para a seleção do material para enxerto é determinado pelas seguintes características: capacidade de produção óssea no seio por proliferação celular através de osteoblastos transplantados ou por osteocondução de células da superfície do enxerto, capacidade de produzir osso por osteoindução de células mesenquimais, capacidade do osso inicialmente formado de se transformar em osso medular maduro, manutenção do osso maduro ao longo do tempo sem perda após entrar em função, capacidade para estabilizar implantes quando colocados simultaneamente com enxerto, baixa taxa de infecção, fácil acesso, baixa antigenicidade e alto nível de confiabilidade (SPIEKERMANN, BIESTERFELD e EDELHOFF 2000).
+        </p>
     </div>
+</div>
+<footer>
+    <div class="footer-container">
+        <p><b>Bucal Face – 28 anos de cuidado, confiança e sorrisos transformados.</b></p>
+    </div>
+</footer>
 {% endblock content %}

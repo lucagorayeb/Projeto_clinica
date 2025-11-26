@@ -1,38 +1,37 @@
 {% extends "clinica/public/base.html" %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/desease/main_desease.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/main_desease.css' %}">
     	
-    <div>
+<div class="desease-container">
+    <div class="desease-container-internal">
         <h1>Tracionamento Dentário</h1>
 
-        <div>
-            <ul>
-                <p>
-                    Alguns dentes podem permanecer “presos” dentro do osso e não nascer na época esperada. Isso é chamado de retenção dentária.
-                    Essa situação pode ter várias causas, como:
-                </p>
-                <li>
-                    <p>Falta de espaço na arcada dentária.</p>
-                </li>
-                <li>
-                    <p>Posição incorreta do dente durante o desenvolvimento.</p>
-                </li>
-                <li>
-                    <p>Presença de dentes extras (supranumerários).</p>
-                </li>
-                <li>
-                    <p>Cistos ou tumores que bloqueiam o caminho.</p>
-                </li>
-                <li>
-                    <p>Perda precoce dos dentes de leite, que pode atrapalhar a erupção do dente permanente.</p>
-                </li>
-            </ul>
-        </div>
+        <ul>
+            <p>
+                Alguns dentes podem permanecer “presos” dentro do osso e não nascer na época esperada. Isso é chamado de retenção dentária.
+                Essa situação pode ter várias causas, como:
+            </p>
+            <li>
+                <p>Falta de espaço na arcada dentária.</p>
+            </li>
+            <li>
+                <p>Posição incorreta do dente durante o desenvolvimento.</p>
+            </li>
+            <li>
+                <p>Presença de dentes extras (supranumerários).</p>
+            </li>
+            <li>
+                <p>Cistos ou tumores que bloqueiam o caminho.</p>
+            </li>
+            <li>
+                <p>Perda precoce dos dentes de leite, que pode atrapalhar a erupção do dente permanente.</p>
+            </li>
+        </ul>
 
-         <div class="imagem-centrada" style="margin: 20px 0;">
+        <div>
             <img src="{% static 'clinica/public/img/tracionamento_de_dente_incluso.jpeg' %}" 
-            alt="Imagem ilustrativa de um implante dentário" style="max-width: 90%; height: auto; border-radius: 8px;">
+            alt="Imagem ilustrativa de um implante dentário">
         </div>
 
 
@@ -55,7 +54,11 @@
         </p>
 
         <p>Assim, o tracionamento dentário é uma técnica eficaz e segura para recuperar dentes retidos, devolvendo funcionalidade, estética e saúde bucal ao paciente.</p>
-
     </div>
-
+</div>
+<footer>
+    <div class="footer-container">
+        <p><b>Bucal Face – 28 anos de cuidado, confiança e sorrisos transformados.</b></p>
+    </div>
+</footer>
 {% endblock content %}

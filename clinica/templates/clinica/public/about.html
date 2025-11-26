@@ -1,4 +1,102 @@
 {% extends "clinica/public/base.html" %}
 {% block content %}
-    <h1>About Page</h1>    
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/home.css' %}">
+   <div class="home-container">
+    <div class="home-container-internal">
+        <h1>Sobre a Bucal Face</h1>
+        <p>
+            A <strong>Bucal Face</strong> nasceu em 1997 com um propósito claro:
+            oferecer um cuidado odontológico preciso, humano e completo. Desde então, nos tornamos referência
+            em <strong>Ortodontia</strong>, <strong>Cirurgia BucoMaxiloFacial</strong> e, hoje,
+            expandimos nossa atuação para todas as áreas da Odontologia.
+        </p>
+        <p>
+            Ao longo de quase três décadas, evoluímos sem perder nossa essência: unir tradição,
+            tecnologia e atenção individualizada para transformar sorrisos e restaurar a saúde
+            bucal de nossos pacientes.
+        </p>
+    </div>
+
+    <div class="home-container-internal">
+        <h3>Nossa Filosofia</h3>
+        <p>
+            Construímos a Bucal Face sobre quatro pilares essenciais:
+        </p>
+        <ul>
+            <li>Excelência técnica em cada procedimento;</li>
+            <li>Atualização constante em tecnologias e métodos;</li>
+            <li>Ética e responsabilidade em todas as etapas;</li>
+            <li>Humanização como base do atendimento.</li>
+        </ul>
+    </div>
+
+    <div class="home-container-internal">
+        <h3>Dr. Láwrency Gorayeb</h3>
+        <p>
+            <strong>Cirurgião BucoMaxiloFacial e Gestor Clínico | CRO: 758/RO</strong>
+        </p>
+        <p>
+            Com quase 30 anos dedicados à Odontologia, o <strong>Dr. Láwrency Gorayeb</strong> é o
+            alicerce da Bucal Face. Formado em 1997 e especialista em
+            Cirurgia e Traumatologia BucoMaxiloFacial pela UNIFENAS (2003),
+            construiu uma trajetória marcada pela precisão cirúrgica e pelo cuidado humanizado.
+        </p>
+        <h4>Cirurgias Avançadas em Consultório</h4>
+        <p>Realizadas sob anestesia local, com segurança e conforto:</p>
+        <ul>
+            <li>Extração de dentes complexos (incluindo terceiros molares – siso);</li>
+            <li>Implantes dentários com precisão e previsibilidade;</li>
+            <li>Enxertos ósseos para reabilitação;</li>
+            <li>Remoção de cistos e outras lesões intraorais.</li>
+        </ul>
+        <h4>Procedimentos de Alta Complexidade em Ambiente Hospitalar</h4>
+        <p>Para casos que exigem anestesia geral:</p>
+        <ul>
+            <li>Tratamento de fraturas dos ossos da face;</li>
+            <li>Cirurgias da ATM (Articulação TêmporoMandibular);</li>
+            <li>Correções estruturais e funcionais da face.</li>
+        </ul>
+    </div>
+
+    <div class="home-container-internal">
+        <h3>Odontologia Completa</h3>
+        <p>
+            Hoje oferecemos um cuidado multidisciplinar completo:
+        </p>
+
+        <ul>
+            <li>Ortodontia</li>
+            <li>Dentística Estética</li>
+            <li>Endodontia</li>
+            <li>Prótese e Reabilitação Oral</li>
+            <li>Periodontia</li>
+            <li>Odontopediatria</li>
+            <li>Cirurgia Oral</li>
+            <li>Harmonização Orofacial</li>
+        </ul>
+    </div>
+
+    <div class="home-container-internal">
+        <h3>Nosso Endereço</h3>
+        <p>
+            <strong>Bucal Face – Ortodontia, Cirurgia e Odontologia Integrada</strong><br>
+            Rua Quintino Bocaiúva, nº 1046, Andar Superior<br>
+            Bairro Olaria – CEP 76.801-240<br>
+            Porto Velho – RO
+        </p>
+
+        <h3>Nosso Contato</h3>
+        <p>
+            Telefone/WhatsApp: (69) 9 99955-9280 <br>
+            E-mail: clinicadecirurgiabucalface@bucalface.com.br
+        </p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <p><b>Bucal Face – 28 anos de cuidado, confiança e sorrisos transformados.</b></p>
+    </div>
+</footer>
 {% endblock content %}

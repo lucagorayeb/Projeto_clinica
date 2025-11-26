@@ -1,23 +1,21 @@
 {% extends "clinica/public/base.html" %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/desease/main_desease.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/main_desease.css' %}">
     	
-    <div>
+<div class="desease-container">
+    <div class="desease-container-internal">
         <h1>Cistos Odontogênicos</h1>
         <h2>Remoção de Cistos Odontogênicos</h2>
-
-        <div class="imagem-centrada" style="margin: 20px 0;">
-            <img src="{% static 'clinica/public/img/cisto_dentario.jpeg' %}"
-                     alt="Radiografia e diagrama ilustrando a formação de um cisto odontogênico no osso maxilar."
-                     style="max-width: 90%; height: auto; border-radius: 8px;">
-        </div>
-
         <p>
             Os cistos odontogênicos são cavidades formadas dentro do osso dos maxilares (maxila e mandíbula) devido à proliferação de células epiteliais que participam do desenvolvimento dos dentes.
             Essas células podem ter origem em diferentes estruturas relacionadas à formação dentária, como a lâmina dentária, o órgão do esmalte ou a bainha de Hertwig
             — todas derivadas do tecido chamado ectoderma, presente durante o desenvolvimento da face e da boca.
         </p>
+        <div>
+            <img src="{% static 'clinica/public/img/cisto_dentario.jpeg' %}"
+                        alt="Radiografia e diagrama ilustrando a formação de um cisto odontogênico no osso maxilar.">
+        </div>
 
         <p>
             A simples presença desses restos celulares, por si só, não causa o cisto. É necessário que exista um fator estimulante, como um processo inflamatório (por exemplo, uma infecção ou trauma),
@@ -42,4 +40,13 @@
         </ul>
 
     </div>
+
+</div>
+
+<footer>
+    <div class="footer-container">
+        <p><b>Bucal Face – 28 anos de cuidado, confiança e sorrisos transformados.</b></p>
+    </div>
+</footer>
+
 {% endblock content %}

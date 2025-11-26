@@ -1,130 +1,140 @@
 {% extends "clinica/public/base.html" %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/desease/main_desease.css' %}">
-    <div>
-        <h1>Cirurgia e Traumatologia Buco Maxilo Facial</h1>
-
-        <div class="imagem-centrada" style="margin: 20px 0;">
-            <img src="{% static 'clinica/public/img/traumasface.jpeg' %}" alt="Imagem ilustrativa de trauma facial" 
-                style="max-width: 90%; height: auto; border-radius: 8px;">
+<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/main_desease.css' %}">
+<div class="desease-container">
+    <h1>Cirurgia e Traumatologia Buco Maxilo Facial</h1>
+        <div class="desease-container-internal">
+            <p>
+                A <b>Cirurgia e Traumatologia Buco Maxilo</b> Facial é uma especialidade da odontologia, que trata cirurgicamente <b>as doenças da cavidade bucal e anexos</b>, tais como: traumatismos e deformidades faciais (congênitos ou adquiridos), traumas e deformidades maxilares e mandibulares, envolvendo a região compreendida entre o osso hióide e o supercílio de baixo para cima, e do trágus à pirâmide nasal, de trás para diante.
+            </p>
+            <p>
+                Dentre as doenças, existem os tumores benignos e malignos, os cistos dos maxilares, as patologias provocadas por fungos, vírus, e manifestações associadas a doenças sistêmicas como AIDS, tuberculose, sífilis entre outras. As deformidades faciais são compreendidas desde as sequelas de doenças como o câncer, os traumas severos, ou distúrbios do desenvolvimento, como as síndromes ou alterações do desenvolvimento como o prognatismo (aumento dos maxilares), micrognatismo (diminuição dos maxilares) ou a combinação delas.
+            </p>
+            <p>
+                Hipócrates já mencionava as lesões da boca e efetuava certos tratamentos desde a dor de dente ao tratamento de fraturas na face. Existem registros de reduções de fraturas da face, rudimentares porém eficientes, e estes princípios foram utilizados como base para os tratamentos atuais. <b>A Cirurgia e Traumatologia Buco Maxilo Facial</b> é realizada tanto em âmbito ambulatorial ou hospitalar. Nos ambulatórios, consultórios ou clínicas, são exercidas cirurgias menores, na sua grande maioria sob anestesia local, onde são por exemplo removidos <b>dentes inclusos, pequenos tumores benignos, cistos, lesões periapicais ou paradentais, implantes dentários, cirurgias para adaptações protéticas</b> entre outras. As cirurgias de grande porte são realizadas sob anestesia geral em ambiente hospitalar e demandam maiores cuidados. São as cirurgias de grandes <b>tumores, fraturas faciais, cirurgias ortognáticas</b> entre outras. Na atualidade em que aumenta assustadoramente o número de casos de traumatismos faciais, e que a sobrevida do paciente após o trauma inicial tem sido assegurada com maior constância, é mais que necessário um serviço da especialidade de trauma facial no município.
+            </p>
+            <p>
+                A princípio os procedimentos menores incluem as exodontias (extração de dentes) de dentes não irrompidos, ou que ao se desenvolverem não se acomodaram na arcada devido a falta de espaço, que neste caso é necessário um exame mais detalhado do caso, como radiografias, ou mesmo tomografias computadorizadas para um melhor diagnóstico e planejamento cirúrgico. A remoção de cistos do complexo maxilo-mandibular, que são lesões que se desenvolvem dentro do osso e o expandem, contendo líquido no seu interior, desencadeado por diversas causas. Os tumores de pequenas proporções oriundos de glândulas salivares, aumento de volume nas gengivas, ou dos tecidos adjacentes. Correções cirúrgicas para adaptação de próteses, implantes ósseointegrados, também compõe esta gama de cirurgias ditas menores.
+            </p>
         </div>
-        <p>
-            <div>
-                <p>
-                    A <b>Cirurgia e Traumatologia Buco Maxilo</b> Facial é uma especialidade da odontologia, que trata cirurgicamente <b>as doenças da cavidade bucal e anexos</b>, tais como: traumatismos e deformidades faciais (congênitos ou adquiridos), traumas e deformidades maxilares e mandibulares, envolvendo a região compreendida entre o osso hióide e o supercílio de baixo para cima, e do trágus à pirâmide nasal, de trás para diante.
-                </p>
-                <p>
-                    Dentre as doenças, existem os tumores benignos e malignos, os cistos dos maxilares, as patologias provocadas por fungos, vírus, e manifestações associadas a doenças sistêmicas como AIDS, tuberculose, sífilis entre outras. As deformidades faciais são compreendidas desde as sequelas de doenças como o câncer, os traumas severos, ou distúrbios do desenvolvimento, como as síndromes ou alterações do desenvolvimento como o prognatismo (aumento dos maxilares), micrognatismo (diminuição dos maxilares) ou a combinação delas.
-                </p>
-                <p>
-                    Hipócrates já mencionava as lesões da boca e efetuava certos tratamentos desde a dor de dente ao tratamento de fraturas na face. Existem registros de reduções de fraturas da face, rudimentares porém eficientes, e estes princípios foram utilizados como base para os tratamentos atuais. <b>A Cirurgia e Traumatologia Buco Maxilo Facial</b> é realizada tanto em âmbito ambulatorial ou hospitalar. Nos ambulatórios, consultórios ou clínicas, são exercidas cirurgias menores, na sua grande maioria sob anestesia local, onde são por exemplo removidos <b>dentes inclusos, pequenos tumores benignos, cistos, lesões periapicais ou paradentais, implantes dentários, cirurgias para adaptações protéticas</b> entre outras. As cirurgias de grande porte são realizadas sob anestesia geral em ambiente hospitalar e demandam maiores cuidados. São as cirurgias de grandes <b>tumores, fraturas faciais, cirurgias ortognáticas</b> entre outras. Na atualidade em que aumenta assustadoramente o número de casos de traumatismos faciais, e que a sobrevida do paciente após o trauma inicial tem sido assegurada com maior constância, é mais que necessário um serviço da especialidade de trauma facial no município.
-                </p>
-                <p>
-                    A princípio os procedimentos menores incluem as exodontias (extração de dentes) de dentes não irrompidos, ou que ao se desenvolverem não se acomodaram na arcada devido a falta de espaço, que neste caso é necessário um exame mais detalhado do caso, como radiografias, ou mesmo tomografias computadorizadas para um melhor diagnóstico e planejamento cirúrgico. A remoção de cistos do complexo maxilo-mandibular, que são lesões que se desenvolvem dentro do osso e o expandem, contendo líquido no seu interior, desencadeado por diversas causas. Os tumores de pequenas proporções oriundos de glândulas salivares, aumento de volume nas gengivas, ou dos tecidos adjacentes. Correções cirúrgicas para adaptação de próteses, implantes ósseointegrados, também compõe esta gama de cirurgias ditas menores.
-                </p>
-            </div>
-            <br>
+        <br>
 
+        <div class="desease-container-internal">
+            <h3>As áreas de atuação do Cirurgião Bucomaxilofacial são:</h3>
+            Lacerações intraorais, Fraturas dentais, Fraturas dos ossos da face (incluindo maxila e mandíbula), Lacerações labiais, Lacerações faciais, Dentes avulsionados, Tumores benignos e Correção de defeitos da face (Cirurgia Ortognática).
+            O tipo mais comum de injúria séria à face ocorre quando os ossos sofrem fraturas. Estas podem envolver: a maxila, a mandíbula, o nariz, o palato, as bochechas, órbitas, e podem ainda ocorrer de forma conjugada. Essas injúrias podem afetar a visão, a respiração, a fala e a salivação. O tratamento delas requer internação hospitalar na maioria das vezes.
             <div>
-                <h3>As áreas de atuação do Cirurgião Bucomaxilofacial são:</h3>
-                Lacerações intraorais, Fraturas dentais, Fraturas dos ossos da face (incluindo maxila e mandíbula), Lacerações labiais, Lacerações faciais, Dentes avulsionados, Tumores benignos e Correção de defeitos da face (Cirurgia Ortognática).
-                O tipo mais comum de injúria séria à face ocorre quando os ossos sofrem fraturas. Estas podem envolver: a maxila, a mandíbula, o nariz, o palato, as bochechas, órbitas, e podem ainda ocorrer de forma conjugada. Essas injúrias podem afetar a visão, a respiração, a fala e a salivação. O tratamento delas requer internação hospitalar na maioria das vezes.
+                <img src="{% static 'clinica/public/img/traumasface.jpeg' %}" 
+                alt="Imagem ilustrativa de um implante dentário">
             </div>
-            <br>
+        </div>
+        <br>
 
+        <div class="desease-container-internal">
+            <h3>Traumas Faciais</h3>
+            <p>
+                Os Cirurgiões especialistas nessa área são treinados no tratamento de grande variedade de injúrias à boca, face e maxilares.
+                São especialistas no reparo de lacerações aos lábios e à face bem como aos dentes e ossos faciais. 
+                Tais especialistas são freqüentemente solicitados às salas de emergências para avaliar e tratar acidentados.
+            </p>
             <div>
-                <h3>Traumas Faciais</h3>
-                Os Cirurgiões especialistas nessa área são treinados no tratamento de grande variedade de injúrias à boca, face e maxilares. São especialistas no reparo de lacerações aos lábios e à face bem como aos dentes e ossos faciais. Tais especialistas são freqüentemente solicitados às salas de emergências para avaliar e tratar acidentados.
-            </div>
-            <br>
-            <div class="imagem-centrada" style="margin: 20px 0;">
                 <img src="{% static 'clinica/public/img/trauma_face_2.jpeg' %}" 
-                alt="Imagem ilustrativa de um implante dentário" style="max-width: 90%; height: auto; border-radius: 8px;">
+                alt="Imagem ilustrativa de um implante dentário">
             </div>
-            <div>
-                <h3>Sinais e sintomas das fraturas de face :</h3>
-                
-                <ul>
-                    <li>Dor.</li>
-                    <li>Adormecimento nos lábios, queixo, língua, nariz.</li>
-                    <li>Dificuldade ou impossibilidade de abrir a boca.</li>
-                    <li>Desvios de mordida.</li>
-                    <li>Afastamento visível entre as coroas dentais.</li>
-                    <li>Lacerações profundas sobre os ossos.</li>
-                </ul>
-            </div>
-
-        </p>
-    </div>
-
-    <div>
-        <div>
-            <h2>Causas Comuns de Lesões na Face</h2>
-            <p>O trauma maxilofacial (da face e maxilares) tem diversas origens. As mais frequentes incluem acidentes de trânsito, quedas, traumas esportivos, atos de violência e acidentes de trabalho. A gravidade varia muito, desde pequenos danos nos dentes até lesões sérias na pele, músculos, nervos e ossos da face.</p>
         </div>
+        <br>
 
-         <div>
-             <h3>Classificação das Lesões Faciais</h3>
-             
-                     <ul>
-                <p>As lesões são classificadas em três tipos principais:</p>
-                <li>
-                    <p>Injúrias aos Tecidos Moles: Lesões na pele, mucosas (como gengivas) e músculos.</p>
-                </li>
-                <li>
-                    <p>Fraturas dos Ossos da Face: Quebras que podem ocorrer na mandíbula, maxila, nariz, palato (céu da boca), ossos das bochechas ou órbitas (ao redor dos olhos).</p>
-                </li>
-                <li>
-                    <p>Injúrias a Regiões Especiais: Lesões que afetam estruturas delicadas como os olhos, nervos faciais e glândulas salivares.</p>
-                </li>
-                     </ul>
-         </div>
-
-        <div>
-            <h2>Tratamento de Fraturas da Face</h2>
-            <p>Fraturas faciais são as lesões sérias mais comuns e, na maioria dos casos, exigem internação hospitalar para tratamento adequado.</p>
-        </div>
-
-        <div class="imagem-centrada" style="margin: 20px 0;">
-            <img src="{% static 'clinica/public/img/trauma_face_3.jpeg' %}" 
-            alt="Imagem ilustrativa de um implante dentário" style="max-width: 90%; height: auto; border-radius: 8px;">
-        </div>
-
-        <div>
-            <h3>Princípio Técnico do Tratamento:</h3>
-            <p>O tratamento de uma fratura de face segue os mesmos princípios ortopédicos de um braço ou perna quebrados:</p>
+        <div class="desease-container-internal">
+            <h3>Sinais e sintomas das fraturas de face :</h3>
+            
             <ul>
-                <li>
-                    <p>Redução (Alinhamento): Os fragmentos ósseos quebrados precisam ser cuidadosamente recolocados em sua posição anatômica correta.</p>
-                </li>
-                <li>
-                    <p>Fixação (Estabilização): Uma vez alinhados, os ossos devem ser mantidos firmes até a cicatrização completa (consolidação óssea), um processo que pode levar seis semanas ou mais.</p>
-                </li>
-                 <li><p>Técnicas:</p>
-                    <ul>
-                        <li>
-                            <p>Redução Fechada: Usada para fraturas "simples", onde os ossos são manipulados e alinhados sem a necessidade de cirurgias invasivas complexas.</p>
-                        </li>
-                        <li>
-                            <p>Contenção Especializada: Diferentemente dos membros, a face exige técnicas de contenção específicas para garantir que as funções e, principalmente, a aparência estética do paciente sejam minimamente afetadas.</p>
-                        </li>
-                    </ul>
-                </li>
+                <li>Dor.</li>
+                <li>Adormecimento nos lábios, queixo, língua, nariz.</li>
+                <li>Dificuldade ou impossibilidade de abrir a boca.</li>
+                <li>Desvios de mordida.</li>
+                <li>Afastamento visível entre as coroas dentais.</li>
+                <li>Lacerações profundas sobre os ossos.</li>
             </ul>
         </div>
+</div>
+
+<div class="desease-container">
+    <div class="desease-container-internal">
+        <h2>Causas Comuns de Lesões na Face</h2>
+        <p>O trauma maxilofacial (da face e maxilares) tem diversas origens. As mais frequentes incluem acidentes de trânsito, quedas, traumas esportivos, atos de violência e acidentes de trabalho. A gravidade varia muito, desde pequenos danos nos dentes até lesões sérias na pele, músculos, nervos e ossos da face.</p>
+    </div>
+
+    <div class="desease-container-internal">
+        <h3>Classificação das Lesões Faciais</h3>
+        
+                <ul>
+        <p>As lesões são classificadas em três tipos principais:</p>
+        <li>
+            <p>Injúrias aos Tecidos Moles: Lesões na pele, mucosas (como gengivas) e músculos.</p>
+        </li>
+        <li>
+            <p>Fraturas dos Ossos da Face: Quebras que podem ocorrer na mandíbula, maxila, nariz, palato (céu da boca), ossos das bochechas ou órbitas (ao redor dos olhos).</p>
+        </li>
+        <li>
+            <p>Injúrias a Regiões Especiais: Lesões que afetam estruturas delicadas como os olhos, nervos faciais e glândulas salivares.</p>
+        </li>
+                </ul>
+    </div>
+
+    <div class="desease-container-internal">
+        <h2>Tratamento de Fraturas da Face</h2>
+        <p>Fraturas faciais são as lesões sérias mais comuns e, na maioria dos casos, exigem internação hospitalar para tratamento adequado.</p>
 
         <div>
-            <h2>Tratamento de Lesões de Tecidos Moles</h2>
-            <p>Lesões na pele (cortes) são tratadas com técnicas de sutura (pontos) refinadas, buscando o melhor resultado estético possível (mínimas cicatrizes). Simultaneamente, o especialista inspeciona e, se necessário, repara estruturas mais profundas que possam ter sido danificadas, como nervos ou glândulas.</p>
-            <div class="imagem-centrada" style="margin: 20px 0;">
-                <img src="{% static 'clinica/public/img/trauma_face_4.jpeg' %}" 
-                alt="Imagem ilustrativa de um implante dentário" style="max-width: 90%; height: auto; border-radius: 8px;">
-            </div>
-            <h2>O Papel do Especialista</h2>
-            <p>
-                Os especialistas na área (cirurgia e traumatologia maxilofacial) estão preparados para atuar em todas as etapas: desde o atendimento de emergência (tratamento agudo) até as reconstruções de longo prazo e tratamentos reabilitadores para corrigir quaisquer sequelas resultantes do trauma.
-            </p>
-                </div>
+            <img src="{% static 'clinica/public/img/trauma_face_3.jpeg' %}" 
+            alt="Imagem ilustrativa de um implante dentário">
         </div>
+    </div>
+
+    
+
+    <div class="desease-container-internal">
+        <h3>Princípio Técnico do Tratamento:</h3>
+        <p>O tratamento de uma fratura de face segue os mesmos princípios ortopédicos de um braço ou perna quebrados:</p>
+        <ul>
+            <li>
+                <p>Redução (Alinhamento): Os fragmentos ósseos quebrados precisam ser cuidadosamente recolocados em sua posição anatômica correta.</p>
+            </li>
+            <li>
+                <p>Fixação (Estabilização): Uma vez alinhados, os ossos devem ser mantidos firmes até a cicatrização completa (consolidação óssea), um processo que pode levar seis semanas ou mais.</p>
+            </li>
+                <li><p>Técnicas:</p>
+                <ul>
+                    <li>
+                        <p>Redução Fechada: Usada para fraturas "simples", onde os ossos são manipulados e alinhados sem a necessidade de cirurgias invasivas complexas.</p>
+                    </li>
+                    <li>
+                        <p>Contenção Especializada: Diferentemente dos membros, a face exige técnicas de contenção específicas para garantir que as funções e, principalmente, a aparência estética do paciente sejam minimamente afetadas.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="desease-container-internal">
+        <h2>Tratamento de Lesões de Tecidos Moles</h2>
+        <p>Lesões na pele (cortes) são tratadas com técnicas de sutura (pontos) refinadas, buscando o melhor resultado estético possível (mínimas cicatrizes). Simultaneamente, o especialista inspeciona e, se necessário, repara estruturas mais profundas que possam ter sido danificadas, como nervos ou glândulas.</p>
+        <div>
+            <img src="{% static 'clinica/public/img/trauma_face_4.jpeg' %}" 
+            alt="Imagem ilustrativa de um implante dentário">
+        </div>
+        <h2>O Papel do Especialista</h2>
+        <p>
+            Os especialistas na área (cirurgia e traumatologia maxilofacial) estão preparados para atuar em todas as etapas: desde o atendimento de emergência (tratamento agudo) até as reconstruções de longo prazo e tratamentos reabilitadores para corrigir quaisquer sequelas resultantes do trauma.
+        </p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <p><b>Bucal Face – 28 anos de cuidado, confiança e sorrisos transformados.</b></p>
+    </div>
+</footer>
+
 {% endblock content %}
