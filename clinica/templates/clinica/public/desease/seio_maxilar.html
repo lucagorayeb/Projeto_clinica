@@ -1,34 +1,41 @@
 {% extends "clinica/public/base.html" %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/desease/main_desease.css' %}">
-    <div>
-        <h1>Levantamento de Seio Maxilar</h1>	
-
+<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/main_desease.css' %}">
+<div class="desease-container">
+    <div class="desease-container-internal">
+        <h1>Levantamento de Seio Maxilar</h1>
+    
         <p>
             O levantamento do seio maxilar com enxerto sinusal é uma das melhores opções para obtenção de uma altura óssea suficiente para a instalação de implantes osseointegráveis.
         </p>
-
+    
         <p>
             O levantamento do seio com enxerto de osso pode ser realizado com diversos materiais de enxertia, incluindo osso autógeno, aloenxerto, aloplástico material xenoenxerto, sendo considerado um procedimento com alto índice de sucesso.
         </p>
-
+    
         <p>
             A perda óssea em região posterior da maxila pode reduzir a possibilidade de inserção de implantes com comprimentos adequados para obter boa estabilidade sob forças de cargas mastigatórias (HALLMAN; NORDIN, 2004).
-        </p>  
-
+        </p>
+    
         <p>
             Os processos de reabsorção após perdas dentárias são freqüentes devido à falta de estímulo mastigatório ocasionando perda inicial em largura e altura no rebordo alveolar ósseo. As elevações do seio maxilares foram inicialmente propostas por TATUM em meados dos anos 70, sendo descritos procedimentos em dois tempos cirúrgicos com enxertos particulados de crista de ilíaco (BOYNE; JAMES, 1980) com fase de cicatrização de 4 a 6 meses para permitir integração biológica do enxerto. O enxerto ideal deve apresentar características osteogênicas para estimular osteoblastos vivos a formar osso novo, sendo osteocondutiva servindo como arcabouço para a invasão de vasos provenientes do osso vizinho, além de ser osteoindutiva para estimular células mesenquimatosas a se diferenciar em osteoblastos conforme (HAAS; BARON; DONATH et al., 2002).
         </p>
-        
+    
         <p>
-            A utilização de técnicas de levantamento sinusal foram aprimoradas de modo a viabilizar seu procedimento em consultórios e ambulatórios de especialidade graças aos substitutos ósseos que foram recomendados por vários autores através de pesquisas, podendo ser encontrados em quantidade ilimitada e, utilizados isoladamente ou em combinação com o osso autógeno "próprio paciente". 
+            A utilização de técnicas de levantamento sinusal foram aprimoradas de modo a viabilizar seu procedimento em consultórios e ambulatórios de especialidade graças aos substitutos ósseos que foram recomendados por vários autores através de pesquisas, podendo ser encontrados em quantidade ilimitada e, utilizados isoladamente ou em combinação com o osso autógeno "próprio paciente".
         </p>
+    
+        <div>
+            <img src="{% static 'clinica/public/img/seio_maxilar.jpeg' %}"
+            alt="Imagem ilustrativa de um implante dentário">
+        </div>
     </div>
+</div>
 
-    <div class="imagem-centrada" style="margin: 20px 0;">
-            <img src="{% static 'clinica/public/img/seio_maxilar.jpeg' %}" 
-            alt="Imagem ilustrativa de um implante dentário" style="max-width: 90%; height: auto; border-radius: 8px;">
+<footer>
+    <div class="footer-container">
+        <p><b>Bucal Face – 28 anos de cuidado, confiança e sorrisos transformados.</b></p>
     </div>
-
+</footer>
 {% endblock content %}

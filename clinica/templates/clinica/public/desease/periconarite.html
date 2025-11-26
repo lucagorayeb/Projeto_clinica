@@ -1,155 +1,163 @@
 {% extends "clinica/public/base.html" %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/desease/main_desease.css' %}">
-    <div>
+<link rel="stylesheet" type="text/css" href="{% static 'clinica/public/main_desease.css' %}">
+<div class="desease-container">
+    <div class="desease-container-internal">
         <h1>Entendendo a Pericoronarite (Inflamação do Siso)</h1>
-        <br>
+    <br>
+        <h2>O que é Pericoronarite?</h2>
+        
+        <p>
+            A pericoronarite é uma inflamação muito comum que acontece na gengiva que cobre parcialmente um dente, mais frequentemente o dente do siso (o terceiro molar), quando ele está tentando nascer.
+        </p>
+
         <div>
-            <h2>O que é Pericoronarite?</h2>
-            
-            <p>
-                A pericoronarite é uma inflamação muito comum que acontece na gengiva que cobre parcialmente um dente, mais frequentemente o dente do siso (o terceiro molar), quando ele está tentando nascer.
-            </p>
-
-            <div class="imagem-centrada" style="margin: 20px 0;">
-                <img src="{% static 'clinica/public/img/periconarite_2.jpeg' %}" 
-                alt="Imagem ilustrativa de um implante dentário" style="max-width: 90%; height: auto; border-radius: 8px;">
-            </div>
-
-            <p>
-                Isso acontece muito em jovens adultos, geralmente na faixa dos 17 aos 21 anos. O principal problema é que essa gengiva inflamada causa muito inchaço, dor, dificuldade para abrir a boca e, em alguns casos, pode até sair pus da região.
-            </p>
-        </div>
-        <br>
-        <div>
-            <h2>Quais são os Sintomas?</h2>
-
-            <ul>
-                <p>Os sinais mais comuns de que você pode estar com pericoronarite incluem:</p>
-
-                <li>
-                    <p>Dor: Pode ser uma dor forte no local do dente ou uma dor que se espalha (irradia) por toda a mandíbula.</p>
-                </li>
-
-                <li>
-                    <p>Inchaço: A gengiva fica inchada, e o inchaço pode passar para o rosto ou para a região do pescoço, logo abaixo do queixo.</p>
-                </li>
-
-                <li>
-                    <p>Dificuldade de abrir a boca: Conhecido tecnicamente como trismo, é quando a inflamação atinge os músculos e você mal consegue abrir ou fechar a boca.</p>
-                </li>
-
-                <li>
-                    <p>Desconforto geral: Dor ou dificuldade para falar, mastigar e engolir.</p>
-                </li>
-
-                <li>
-                    <p>Dor na Articulação: Pode causar dores na ATM (articulação têmporo-mandibular), que é aquela "junta" perto do ouvido que permite o movimento do maxilar.</p>
-                </li>
-            </ul>
-        </div>
-        <br>
-        <div>
-            <h2>Por que a Pericoronarite Acontece? (Causas)</h2>
-
-            <ul>
-                <p>A inflamação ocorre geralmente por dois motivos, muitas vezes combinados:</p>
-
-                <li><p>Acúmulo de Bactérias:</p>
-                    <ul>
-                        <li>
-                            <p>O pedaço de gengiva que cobre parcialmente o dente (chamado opérculo) cria uma "bolsa" onde a escova de dentes não alcança.</p>
-                        </li>
-
-                        <li>
-                            <p>Esse local acumula restos de comida e placa, oferecendo as condições perfeitas (umidade, calor e alimento) para as bactérias crescerem ativamente.</p>
-                        </li>
-                    </ul>
-                </li>
-
-                <li><p>Trauma (Machucado):</p>
-                    <ul>
-                        <li>
-                            <p>Muitas vezes, o dente de cima (o dente antagonista) morde essa gengiva inchada de baixo ao fechar a boca.</p>
-                        </li>
-
-                        <li>
-                            <p>Essa mordida constante machuca o local (irritação traumática) e piora muito a inflamação.</p>
-                        </li>
-                    </ul>
-                </li>  
-            </ul>
+            <img src="{% static 'clinica/public/img/periconarite_2.jpeg' %}" 
+            alt="Imagem ilustrativa de um implante dentário">
         </div>
 
+        <p>
+            Isso acontece muito em jovens adultos, geralmente na faixa dos 17 aos 21 anos. O principal problema é que essa gengiva inflamada causa muito inchaço, dor, dificuldade para abrir a boca e, em alguns casos, pode até sair pus da região.
+        </p>
+    </div>
+    <br>
+    <div class="desease-container-internal">
+        <h2>Quais são os Sintomas?</h2>
+
+        <ul>
+            <p>Os sinais mais comuns de que você pode estar com pericoronarite incluem:</p>
+
+            <li>
+                <p>Dor: Pode ser uma dor forte no local do dente ou uma dor que se espalha (irradia) por toda a mandíbula.</p>
+            </li>
+
+            <li>
+                <p>Inchaço: A gengiva fica inchada, e o inchaço pode passar para o rosto ou para a região do pescoço, logo abaixo do queixo.</p>
+            </li>
+
+            <li>
+                <p>Dificuldade de abrir a boca: Conhecido tecnicamente como trismo, é quando a inflamação atinge os músculos e você mal consegue abrir ou fechar a boca.</p>
+            </li>
+
+            <li>
+                <p>Desconforto geral: Dor ou dificuldade para falar, mastigar e engolir.</p>
+            </li>
+
+            <li>
+                <p>Dor na Articulação: Pode causar dores na ATM (articulação têmporo-mandibular), que é aquela "junta" perto do ouvido que permite o movimento do maxilar.</p>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <div class="desease-container-internal">
+        <h2>Por que a Pericoronarite Acontece? (Causas)</h2>
+
+        <ul>
+            <p>A inflamação ocorre geralmente por dois motivos, muitas vezes combinados:</p>
+
+            <li><p>Acúmulo de Bactérias:</p>
+                <ul>
+                    <li>
+                        <p>O pedaço de gengiva que cobre parcialmente o dente (chamado opérculo) cria uma "bolsa" onde a escova de dentes não alcança.</p>
+                    </li>
+
+                    <li>
+                        <p>Esse local acumula restos de comida e placa, oferecendo as condições perfeitas (umidade, calor e alimento) para as bactérias crescerem ativamente.</p>
+                    </li>
+                </ul>
+            </li>
+
+            <li><p>Trauma (Machucado):</p>
+                <ul>
+                    <li>
+                        <p>Muitas vezes, o dente de cima (o dente antagonista) morde essa gengiva inchada de baixo ao fechar a boca.</p>
+                    </li>
+
+                    <li>
+                        <p>Essa mordida constante machuca o local (irritação traumática) e piora muito a inflamação.</p>
+                    </li>
+                </ul>
+            </li>  
+        </ul>
+
         <br>
 
-         <div class="imagem-centrada" style="margin: 20px 0;">
+        <div>
             <img src="{% static 'clinica/public/img/periconarite_1.jpeg' %}" 
-            alt="Imagem ilustrativa de um implante dentário" style="max-width: 90%; height: auto; border-radius: 8px;">
-        </div>
-
-
-        <div>
-            <h2>O que o Dentista Vê no Exame?</h2>
-
-            <ul>
-                <p>Quando o dentista examina sua boca, ele geralmente encontra:</p>
-
-                <li>
-                    <p>A gengiva ao redor do dente muito vermelha, inchada (termo técnico: edemaciada) e dolorida ao toque.</p>
-                </li>
-
-                <li>
-                    <p>Pode sair pus (uma secreção amarelada, chamada exsudação) debaixo da gengiva ao pressionar o local.</p>
-                </li>
-
-                <li>
-                    <p>O paciente pode relatar febre, calafrios e mal-estar geral, além de mau hálito (halitose) por causa da infecção.</p>
-                </li>
-
-                <li>
-                    <p>Ao apalpar o pescoço e a região abaixo da mandíbula, o dentista pode sentir "ínguas" (os nódulos linfáticos) inchadas, endurecidas e doloridas, que são um sinal de defesa do corpo contra a infecção.</p>
-                </li>
-            </ul>
-
-        </div>
-        <br>
-        <div>
-            <h2>Como é feito o Tratamento?</h2>
-
-            <ul>
-                <p>
-                    O tratamento deve ser sempre feito por um cirurgião-dentista.
-                    <b>Ele é o único profissional que pode diagnosticar corretamente e indicar a melhor solução.</b>
-                </p>
-
-                <p>O tratamento da crise de pericoronarite geralmente envolve:</p>
-
-                <li>
-                    <p><b>Limpeza Profissional:</b> O dentista fará a limpeza da área, removendo os restos de comida e o pus debaixo da gengiva, muitas vezes usando antissépticos ou água oxigenada (10 volumes) no consultório.</p>
-                </li>
-                <li>
-                    <p>
-                        <b>Medicação:</b> O dentista pode receitar:
-                        Analgésicos e Anti-inflamatórios: Para aliviar a dor e diminuir o inchaço.
-                    </p>
-                </li>
-
-                <li>
-                    <p><b>Antibióticos:</b> Apenas se houver sinais de uma infecção mais séria (como pus, febre ou grande inchaço).</p>
-                </li>
-
-                <li>
-                    <p><b>Cuidados em Casa:</b> Bochechos com antissépticos bucais (como a clorexidina) podem ser recomendados para ajudar a manter a área limpa enquanto ela cicatriza.</p>
-                </li>
-
-                <li>
-                    <p>
-                        <b>Solução Definitiva:</b> Depois que a inflamação e a infecção estiverem controladas, o dentista avaliará o que fazer. Pode ser indicada uma pequena cirurgia para remover o excesso de gengiva que cobre o dente ou, o que é mais comum, a extração (remoção) do próprio dente do siso para evitar que o problema volte a acontecer.
-                    </p>
-                </li>
-            </ul>
+            alt="Imagem ilustrativa de um implante dentário">
         </div>
     </div>
+
+
+
+
+    <div class="desease-container-internal">
+        <h2>O que o Dentista Vê no Exame?</h2>
+
+        <ul>
+            <p>Quando o dentista examina sua boca, ele geralmente encontra:</p>
+
+            <li>
+                <p>A gengiva ao redor do dente muito vermelha, inchada (termo técnico: edemaciada) e dolorida ao toque.</p>
+            </li>
+
+            <li>
+                <p>Pode sair pus (uma secreção amarelada, chamada exsudação) debaixo da gengiva ao pressionar o local.</p>
+            </li>
+
+            <li>
+                <p>O paciente pode relatar febre, calafrios e mal-estar geral, além de mau hálito (halitose) por causa da infecção.</p>
+            </li>
+
+            <li>
+                <p>Ao apalpar o pescoço e a região abaixo da mandíbula, o dentista pode sentir "ínguas" (os nódulos linfáticos) inchadas, endurecidas e doloridas, que são um sinal de defesa do corpo contra a infecção.</p>
+            </li>
+        </ul>
+
+    </div>
+    <br>
+    <div class="desease-container-internal">
+        <h2>Como é feito o Tratamento?</h2>
+
+        <ul>
+            <p>
+                O tratamento deve ser sempre feito por um cirurgião-dentista.
+                <b>Ele é o único profissional que pode diagnosticar corretamente e indicar a melhor solução.</b>
+            </p>
+
+            <p>O tratamento da crise de pericoronarite geralmente envolve:</p>
+
+            <li>
+                <p><b>Limpeza Profissional:</b> O dentista fará a limpeza da área, removendo os restos de comida e o pus debaixo da gengiva, muitas vezes usando antissépticos ou água oxigenada (10 volumes) no consultório.</p>
+            </li>
+            <li>
+                <p>
+                    <b>Medicação:</b> O dentista pode receitar:
+                    Analgésicos e Anti-inflamatórios: Para aliviar a dor e diminuir o inchaço.
+                </p>
+            </li>
+
+            <li>
+                <p><b>Antibióticos:</b> Apenas se houver sinais de uma infecção mais séria (como pus, febre ou grande inchaço).</p>
+            </li>
+
+            <li>
+                <p><b>Cuidados em Casa:</b> Bochechos com antissépticos bucais (como a clorexidina) podem ser recomendados para ajudar a manter a área limpa enquanto ela cicatriza.</p>
+            </li>
+
+            <li>
+                <p>
+                    <b>Solução Definitiva:</b> Depois que a inflamação e a infecção estiverem controladas, o dentista avaliará o que fazer. Pode ser indicada uma pequena cirurgia para remover o excesso de gengiva que cobre o dente ou, o que é mais comum, a extração (remoção) do próprio dente do siso para evitar que o problema volte a acontecer.
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <p><b>Bucal Face – 28 anos de cuidado, confiança e sorrisos transformados.</b></p>
+    </div>
+</footer>
 {% endblock content %}

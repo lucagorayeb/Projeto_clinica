@@ -9,12 +9,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{% static 'clinica/public/main.css' %}">
+    
 
     {% if title%}
         <title>Clínica de Cirurgia Bucal Face - {{ title }}</title>
     {% else %}
         <title>Clínica de Cirurgia Bucal Face</title>
     {% endif %}
+
+    <link rel="shortcut icon" href="{% static 'clinica/public/img/icone.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'clinica/public/img/icone.ico' %}" type="image/x-icon">
 
 </head>
 
@@ -30,20 +34,20 @@
                 <div class="navbar-nav mr-auto">
                 <a class="nav-item nav-link" href="{% url 'clinica-home' %}">Home</a>
                 <a class="nav-item nav-link" href="{% url 'clinica-professional' %}">Profissional</a>
-                <div  class="submenu-tratamentos nav-item nav-link">
+                <div  class="nav-item nav-link submenu-tratamentos">
                     <ul>
                         <li> <a href="{% url 'clinica-desease' %}">Tratamentos</a>
                                 <ul >
-                                    <li> <a  href="{% url 'clinica-desease-cirurgia-traumatologia'%}">Traumatologia</a> </li>
-                                    <li> <a  href="{% url 'clinica-desease-periconarite'%}">Pericoronarite</a> </li>
-                                    <li> <a  href="{% url 'clinica-dentes-inclusos' %}">Dente Incluso</a> </li>
-                                    <li> <a  href="{% url 'clinica-tracionamento-dentario' %}">Tracionamento Dentário</a> </li>
-                                    <li> <a  href="{% url 'clinica-cisto-odontogenico' %}"> Cisto </a></li>
-                                    <li> <a  href="{% url 'clinica-freio' %}"> Freio </a></li>
-                                    <li> <a  href="{% url 'clinica-enxertos' %}"> Enxertos </a></li>
-                                    <li><a href="{% url 'clinica-seio-maxilar' %}">Seio Maxilar</a></li>
-                                    <li><a href="{% url 'clinica-implantes' %}">Implantes</a></li>
-                                    <li><a href="{% url 'clinica-atm' %}">A.T.M</a></li>
+                                    <li> <a class="nav-item nav-link" href="{% url 'clinica-desease-cirurgia-traumatologia'%}">Traumatologia</a> </li>
+                                    <li> <a class="nav-item nav-link" href="{% url 'clinica-desease-periconarite'%}">Pericoronarite</a> </li>
+                                    <li> <a class="nav-item nav-link" href="{% url 'clinica-dentes-inclusos' %}">Dente Incluso</a> </li>
+                                    <li> <a class="nav-item nav-link" href="{% url 'clinica-tracionamento-dentario' %}">Tracionamento Dentário</a> </li>
+                                    <li> <a class="nav-item nav-link" href="{% url 'clinica-cisto-odontogenico' %}"> Cisto </a></li>
+                                    <li> <a class="nav-item nav-link" href="{% url 'clinica-freio' %}"> Freio </a></li>
+                                    <li> <a class="nav-item nav-link" href="{% url 'clinica-enxertos' %}"> Enxertos </a></li>
+                                    <li><a class="nav-item nav-link" href="{% url 'clinica-seio-maxilar' %}">Seio Maxilar</a></li>
+                                    <li><a class="nav-item nav-link" href="{% url 'clinica-implantes' %}">Implantes</a></li>
+                                    <li><a class="nav-item nav-link" href="{% url 'clinica-atm' %}">A.T.M</a></li>
                                 </ul>
                         </li>
                     </ul>
