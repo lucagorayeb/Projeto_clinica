@@ -87,6 +87,12 @@ class ConsultaForm(forms.ModelForm):
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
             self.fields['exames_trazidos'].widget.attrs['class'] = 'exames-container'
+            if 'paciente_consulta' in self.fields:
+                self.fields['paciente_consulta'].widget.can_add_related = False
+                self.fields['paciente_consulta'].widget.can_change_related = True
+                self.fields['paciente_consulta'].widget.can_view_related = True
+                self.fields['paciente_consulta'].widget.can_delete_related = False
+
 
 class PacienteForm(forms.ModelForm):
     class Meta:

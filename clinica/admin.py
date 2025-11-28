@@ -33,6 +33,7 @@ class AgendamentoAdmin(admin.ModelAdmin):
     )
     autocomplete_fields = ['paciente_agendamento']
 
+
 class ConsultaAdmin(admin.ModelAdmin):
     form = ConsultaForm
     list_display = ['paciente_consulta', 'Consulta_Realizada', 'retorno_realizado']
@@ -53,6 +54,7 @@ class ConsultaAdmin(admin.ModelAdmin):
         }),
     )
     autocomplete_fields = ['paciente_consulta']
+
 
     class Media:
         css = {
