@@ -23,27 +23,27 @@ class Paciente(models.Model):
     
 class Consulta(models.Model):
     id_consulta = models.AutoField(primary_key=True)
-    Consulta_Realizada = models.CharField(max_length=15, choices=ConsultaRealizada)
-    Paciente_Trouxe_Exames = models.CharField(max_length=5, choices=SimOuNao)   
+    Consulta_Realizada = models.CharField(max_length=15, choices=ConsultaRealizada, null=True, blank=True)
+    Paciente_Trouxe_Exames = models.CharField(max_length=5, choices=SimOuNao, null=True, blank=True)   
     Exames_Trazidos = MultiSelectField(choices=Exames.choices, max_length=100, blank=True)
-    Laudos_dos_Exames_Trazidos = models.CharField(max_length=2000) 
-    achados_clinicos_da_consulta = models.CharField(max_length=2000)
-    Conduta = models.CharField(max_length=2000)
-    Encaminhado_para_Outro_Profissional = models.CharField(max_length=5, choices=SimOuNao)
-    Profissional_Encaminhado = models.CharField(max_length=70, choices=ProfissionaisParaEncaminhar)
-    estimativa_diagnostico = models.CharField(max_length=2000)
+    Laudos_dos_Exames_Trazidos = models.CharField(max_length=2000, null=True, blank=True) 
+    achados_clinicos_da_consulta = models.CharField(max_length=2000, null=True, blank=True)
+    Conduta = models.CharField(max_length=2000, null=True, blank=True)
+    Encaminhado_para_Outro_Profissional = models.CharField(max_length=5, choices=SimOuNao, null=True, blank=True)
+    Profissional_Encaminhado = models.CharField(max_length=70, choices=ProfissionaisParaEncaminhar, null=True, blank=True)
+    estimativa_diagnostico = models.CharField(max_length=2000, null=True, blank=True)
     exames_solicitados = MultiSelectField(choices=Exames.choices, max_length=100, blank=True)
 
     # Retorno fields
-    retorno_realizado = models.CharField(max_length=15, choices= RetornoRealizado, default=RetornoRealizado.pendente)
-    Laudos_dos_Exames_solicitados = models.CharField(max_length=2000) 
-    achados_clinicos_do_retorno = models.CharField(max_length=2000)
-    Encaminhado_para_Outro_Profissional_retorno = models.CharField(max_length=5, choices=SimOuNao)
-    Profissional_Encaminhado_retorno = models.CharField(max_length=70, choices=ProfissionaisParaEncaminhar)
-    confimacao_diagnostico = models.CharField(max_length=2000)
-    conduta_retorno = models.CharField(max_length=2000)
+    retorno_realizado = models.CharField(max_length=15, choices= RetornoRealizado, default=RetornoRealizado.pendente, null=True, blank=True)
+    Laudos_dos_Exames_solicitados = models.CharField(max_length=2000, null=True, blank=True) 
+    achados_clinicos_do_retorno = models.CharField(max_length=2000, null=True, blank=True)
+    Encaminhado_para_Outro_Profissional_retorno = models.CharField(max_length=5, choices=SimOuNao, null=True, blank=True)
+    Profissional_Encaminhado_retorno = models.CharField(max_length=70, choices=ProfissionaisParaEncaminhar, null=True, blank=True)
+    confimacao_diagnostico = models.CharField(max_length=2000, null=True, blank=True)
+    conduta_retorno = models.CharField(max_length=2000, null=True, blank=True)
     
-    paciente_consulta = models.ForeignKey(Paciente, on_delete=models.CASCADE, null=True, blank=True)
+    paciente_consulta = models.ForeignKey(Paciente, on_delete=models.CASCADE)
     def __str__(self):
         return f'{self.paciente_consulta}'
 

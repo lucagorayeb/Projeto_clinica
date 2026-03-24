@@ -55,15 +55,6 @@ class ConsultaAdmin(admin.ModelAdmin):
     )
     autocomplete_fields = ['paciente_consulta']
 
-
-    class Media:
-        css = {
-            'all': ('clinica/static/private/admin.css',)
-        }
-
-        js = ('clinica/static/private/admin.js',)
-
-
 admin.site.register(Paciente, PacienteAdmin)
 admin.site.register(Agendamento, AgendamentoAdmin)
 admin.site.register(Consulta, ConsultaAdmin)
